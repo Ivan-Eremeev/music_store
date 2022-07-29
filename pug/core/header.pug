@@ -13,7 +13,7 @@ header.header
             input(type="text")
           .header__search-location 
             | По всей России
-            img(src="img/icons/arrow.png", alt="") 
+            img(src="img/icons/arrow.svg", alt="") 
           button(type="submit").header__search-btn.btn.btn--yellow 
             img(src="img/icons/search.png", alt="", srcset="img/icons/search@2x.png 2x")
             | Искать
@@ -25,5 +25,22 @@ header.header
   .header__bottom
     .wrapper 
 
-
+      .menu 
+        nav.menu__nav 
+          ul.menu__list 
+            li.menu__item
+              a(href="#").menu__link Новости
+            li.menu__item
+              a(href="#").menu__link.menu__link--active В продаже
+              .menu__link-sticker 120 000 +
+            li.menu__item
+              a(href="#").menu__link.menu__link--childin Дискография 
+            li.menu__item
+              a(href="#").menu__link Магазины
+            li.menu__item
+              a(href="#").menu__link Статьи
+            li.menu__item
+              a(href="#").menu__link Форум
+            li.menu__item
+              a(href="#").menu__link О портале
 //	/header
