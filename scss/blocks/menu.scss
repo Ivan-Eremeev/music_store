@@ -77,5 +77,14 @@
       }
     }
   }
+  @media (max-width: $break_sm) {
+    &__nav {
+      position: fixed;
+      left: -600px;
+    }
+    &__list {
+      display: block;
+    }
+  }
 }
 /* /menu */

@@ -40,6 +40,17 @@ body {
     display: none !important;
   }
 }
+.nout-hide {
+  @media (max-width: $break_md) {
+    display: none !important;
+  }
+}
+
+.nout-visible {
+  @media (min-width: $break_md + 1) {
+    display: none !important;
+  }
+}
 .row {
   @include row();
 }
@@ -85,6 +96,12 @@ body {
     font-size: 12px;
     font-weight: normal;
     color: #000;
+  }
+  @media (max-width: $break_sm) {
+    font-size: 24px;
+    &__sticker {
+      font-size: 10px;
+    }
   }
 }
 /* /settings */

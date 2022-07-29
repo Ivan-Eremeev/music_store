@@ -47,5 +47,8 @@
       }
     }
   }
+  @media (max-width: $break_sm) {
+    padding: 15px 0 10px;
+  }
 }
 /* /breadcrumbs */

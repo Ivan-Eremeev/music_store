@@ -3,11 +3,13 @@
   &__head {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
   }
   &__sort {
     display: flex;
     align-items: center;
     margin-left: auto;
+    padding: 10px 0;
   }
   &__sort-icon {
     width: 20px;

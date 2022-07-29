@@ -137,6 +137,18 @@ body.lock {
   }
 }
 
+@media (max-width: 1050px) {
+  .nout-hide {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1051px) {
+  .nout-visible {
+    display: none !important;
+  }
+}
+
 .row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -243,6 +255,14 @@ body.lock {
   font-size: 12px;
   font-weight: normal;
   color: #000;
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 24px;
+  }
+  .title__sticker {
+    font-size: 10px;
+  }
 }
 
 /* /settings */
@@ -445,6 +465,7 @@ body.lock {
 }
 .header__logo {
   max-width: 120px;
+  margin-right: 20px;
 }
 .header__search {
   max-width: 780px;
@@ -500,6 +521,7 @@ body.lock {
   -ms-user-select: none;
   user-select: none;
   text-align: center;
+  white-space: nowrap;
 }
 .header__search-location img {
   width: 10px;
@@ -540,6 +562,57 @@ body.lock {
 }
 .header__bottom {
   border-bottom: 1px solid #dddfe0;
+}
+@media (max-width: 1050px) {
+  .header__search-btn {
+    padding: 12px;
+  }
+  .header__search-btn img {
+    margin-right: 0;
+  }
+  .header__search-btn span {
+    display: none;
+  }
+  .header__login {
+    margin-left: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .header__login {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .header__top {
+    padding: 10px 0;
+  }
+  .header__search {
+    max-width: 450px;
+  }
+  .header__search-btn {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .header__top .wrapper {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .header__logo {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .header__search {
+    max-width: none;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .header__search-input input {
+    padding: 0 10px;
+  }
+  .header__search-location {
+    padding: 0 10px;
+  }
 }
 
 /* /header */
@@ -618,6 +691,15 @@ body.lock {
     left: 0;
   }
 }
+@media (max-width: 768px) {
+  .menu__nav {
+    position: fixed;
+    left: -600px;
+  }
+  .menu__list {
+    display: block;
+  }
+}
 
 /* /menu */
 /* breadcrumbs */
@@ -673,6 +755,11 @@ body.lock {
   left: 0;
   width: 100%;
 }
+@media (max-width: 768px) {
+  .breadcrumbs {
+    padding: 15px 0 10px;
+  }
+}
 
 /* /breadcrumbs */
 /* catalog */
@@ -683,6 +770,8 @@ body.lock {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 .catalog__sort {
   display: -webkit-box;
@@ -692,6 +781,7 @@ body.lock {
   -ms-flex-align: center;
   align-items: center;
   margin-left: auto;
+  padding: 10px 0;
 }
 .catalog__sort-icon {
   width: 20px;
