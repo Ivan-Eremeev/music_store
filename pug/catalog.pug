@@ -11,6 +11,48 @@ block content
 
     .content 
 
-      
+      // breadcrumbs
+      .breadcrumbs
+        .wrapper 
+          .breadcrumbs__list 
+            ul 
+              li 
+                a(href="#") В продаже
+              li 
+                a(href="#") Вся Россия
+              li 
+                span Modern Talking
+      // /breadcrumbs
+
+      // catalog
+      .catalog
+        .wrapper 
+          .catalog__head 
+            .title Объявления по запросу «Modern talking» в России
+              .title__sticker 3 600 результатов
+            .catalog__sort 
+              .catalog__sort-icon.active
+                svg(width="20" height="20" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg")
+                  rect(x="1" y="1" width="16" height="16" rx="5")
+                  rect(x="20" y="1" width="39" height="16" rx="5")
+                  rect(x="20" y="22" width="39" height="16" rx="5")
+                  rect(x="20" y="43" width="39" height="16" rx="5")
+                  rect(x="1" y="22" width="16" height="16" rx="5")
+                  rect(x="1" y="43" width="16" height="16" rx="5")
+              .catalog__sort-icon 
+                svg(width="20" height="20" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg")
+                  rect(x="1" y="1" width="27" height="27" rx="5")
+                  rect(x="1" y="32" width="27" height="27" rx="5")
+                  rect(x="32" y="32" width="27" height="27" rx="5")
+                  rect(x="32" y="1" width="27" height="27" rx="5")
+              .catalog__sort-select 
+                select(name="#") 
+                  option(value="#") По дате выхода
+                  option(value="#") Дешевле
+                  option(value="#") Дороже
+          .catalog__container 
+            .catalog__sidebar 
+            .catalog__main 
+      // /catalog
 
     include core/footer.pug
