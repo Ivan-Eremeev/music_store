@@ -1,0 +1,27 @@
+/* btn */
+.btn { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 22px;
+  border-radius: 50px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.3s;
+  text-align: center;
+  img {
+    margin-right: 10px;
+  }
+  &--yellow {
+    background-color: $yellow;
+    color: #000;
+    &:hover {
+      background-color: #FFFC2D;
+      box-shadow: 0 0 10px rgba(255,252,45, 0.5);
+    }
+  }
+}
+/* /btn */

@@ -1,0 +1,29 @@
+// header
+header.header 
+
+  .header__top
+    .wrapper
+
+      a(href="#").header__logo 
+        img(src="img/logo.svg", alt="")
+      
+      .header__search 
+        form(action="#").header__search-block 
+          .header__search-input 
+            input(type="text")
+          .header__search-location 
+            | По всей России
+            img(src="img/icons/arrow.png", alt="") 
+          button(type="submit").header__search-btn.btn.btn--yellow 
+            img(src="img/icons/search.png", alt="", srcset="img/icons/search@2x.png 2x")
+            | Искать
+      
+      .header__login 
+        a(href="#").header__enter Вход
+        a(href="#").header__reg.btn.btn--yellow Регистрация
+
+  .header__bottom
+    .wrapper 
+
+
+//	/header
