@@ -222,9 +222,11 @@ body.lock {
 }
 .navpage h1 {
   font-size: 24px;
+  margin-bottom: 20px;
 }
 .navpage ul {
   font-size: 18px;
+  margin: 10px 0;
 }
 
 .title {
