@@ -33,6 +33,9 @@
     margin-bottom: 3px;
     a {
       color: $blue;
+      &:hover {
+        color: $blueHov;
+      }
     }
   }
   &__price-row {
@@ -112,6 +115,9 @@
     margin-bottom: 5px;
     a {
       color: $blue;
+      &:hover {
+        color: $blueHov;
+      }
     }
   }
   &__points {
@@ -133,6 +139,12 @@
     margin-left: 10px;
     font-size: 12px;
     color: $blue;
+    transition: 0.3s;
+    cursor: pointer;
+    user-select: none;
+    &:hover {
+      color: $blueHov;
+    }
   }
 }
 /* /card-list */

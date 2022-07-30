@@ -1234,6 +1234,9 @@ body.lock {
 .card-list__title a {
   color: #428bf9;
 }
+.card-list__title a:hover {
+  color: #5e40e7;
+}
 .card-list__price-row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1338,6 +1341,9 @@ body.lock {
 .card-list__subtitle a {
   color: #428bf9;
 }
+.card-list__subtitle a:hover {
+  color: #5e40e7;
+}
 .card-list__points {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1367,6 +1373,17 @@ body.lock {
   margin-left: 10px;
   font-size: 12px;
   color: #428bf9;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.card-list__points-count:hover {
+  color: #5e40e7;
 }
 
 /* /card-list */
