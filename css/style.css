@@ -848,17 +848,27 @@ body.lock {
 .catalog__sort-icon {
   width: 20px;
   margin-left: 10px;
+}
+.catalog__sort-icon svg {
+  display: block;
+  fill: #DDDFE0;
+  -webkit-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s;
+}
+.catalog__sort-icon label {
+  display: block;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
 }
-.catalog__sort-icon svg {
-  display: block;
-  fill: #DDDFE0;
+.catalog__sort-icon input {
+  position: absolute;
+  visibility: hidden;
 }
-.catalog__sort-icon.active svg {
+.catalog__sort-icon input:checked ~ label svg {
   fill: #428BF9;
 }
 .catalog__sort-select {
@@ -894,6 +904,30 @@ body.lock {
   -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
 }
+.catalog__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+.catalog__sidebar {
+  width: 326px;
+  padding: 17px 26px 36px 23px;
+  margin-right: 24px;
+  border-radius: 15px;
+  border: solid 2px #f5f6f8;
+}
+.catalog__main {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  padding: 10px 11px 17px;
+  border-radius: 15px;
+  border: solid 2px #f5f6f8;
+}
+
 /* /catalog */
 /* footer */
 /* /footer */

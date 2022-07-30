@@ -14,15 +14,25 @@
   &__sort-icon {
     width: 20px;
     margin-left: 10px;
-    cursor: pointer;
-    user-select: none;
     svg {
       display: block;
       fill: #DDDFE0;
+      transition: .1s;
     }
-    &.active {
-      svg {
-        fill: #428BF9;
+    label {
+      display: block;
+      cursor: pointer;
+      user-select: none;
+    }
+    input {
+      position: absolute;
+      visibility: hidden;
+      &:checked {
+        ~ label {
+          svg {
+            fill: #428BF9;
+          }
+        }
       }
     }
   }
@@ -56,13 +66,21 @@
     }
   }
   &__container {
-    
+    display: flex;
+    justify-content: flex-start;
   }
   &__sidebar {
-    
+    width: 326px;
+    padding: 17px 26px 36px 23px;
+    margin-right: 24px;
+    border-radius: 15px;
+    border: solid 2px #f5f6f8;
   }
   &__main {
-    
+    flex-grow: 1;
+    padding: 10px 11px 17px;
+    border-radius: 15px;
+    border: solid 2px #f5f6f8;
   }
 }
 /* /catalog */
