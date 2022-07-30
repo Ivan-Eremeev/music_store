@@ -85,6 +85,9 @@
   &__bottom {
     border-bottom: 1px solid #dddfe0;
   }
+  &__hamb {
+    display: none;
+  }
   @media (max-width: $break_md) {
     &__search-btn {
       padding: 12px;
@@ -103,16 +106,30 @@
     &__login {
       display: none;
     }
-  }
-  @media (max-width: $break_sm) {
     &__top {
       padding: 10px 0;
     }
     &__search {
       max-width: 450px;
+      margin-left: 0;
     }
     &__search-btn {
       display: none;
+    }
+    &__bottom {
+      border: none;
+    }
+    &__hamb {
+      display: inline-block;
+      margin-left: 10px;
+    }
+    &__search-location {
+      padding: 0 10px;
+    }
+    &__search-input {
+      input {
+        padding: 0 10px;
+      }
     }
   }
   @media (max-width: $break_xs) {
@@ -121,22 +138,10 @@
         flex-wrap: wrap;
       }
     }
-    &__logo {
-      margin-left: auto;
-      margin-right: auto;
-    }
     &__search {
       max-width: none;
       width: 100%;
-      margin-top: 10px;
-    }
-    &__search-input {
-      input {
-        padding: 0 10px;
-      }
-    }
-    &__search-location {
-      padding: 0 10px;
+      order: 1;
     }
   }
 }

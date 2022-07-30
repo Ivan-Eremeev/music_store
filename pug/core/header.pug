@@ -17,6 +17,10 @@ header.header
           button(type="submit").header__search-btn.btn.btn--yellow 
             img(src="img/icons/search.png", alt="", srcset="img/icons/search@2x.png 2x")
             span Искать
+
+      .header__hamb.hamburger.hamburger--squeeze.js-menu-hamb(data-menu="mobileMenu")
+        .hamburger-box
+          .hamburger-inner
       
       .header__login 
         a(href="#").header__enter Вход
@@ -25,14 +29,14 @@ header.header
   .header__bottom
     .wrapper 
 
-      .menu 
+      .menu#mobileMenu
         nav.menu__nav 
           ul.menu__list 
             li.menu__item
               a(href="#").menu__link Новости
             li.menu__item
               a(href="#").menu__link.menu__link--active В продаже
-              .menu__link-sticker 120 000 +
+                .menu__link-sticker 120 000 +
             li.menu__item
               a(href="#").menu__link.menu__link--childin Дискография 
             li.menu__item
