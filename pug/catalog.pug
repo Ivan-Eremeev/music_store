@@ -51,6 +51,7 @@ block content
                     rect(x="32" y="1" width="27" height="27" rx="5")
               .catalog__sort-select 
                 select(name="#") 
+                  option(value="#" disabled selected) Сортировать
                   option(value="#") По дате выхода
                   option(value="#") Дешевле
                   option(value="#") Дороже
@@ -59,12 +60,228 @@ block content
             .catalog__sidebar 
 
               // filter
-              .filter
+              form(action="#").filter.js-filters
+              
                 .filter__buttons 
                   .filter__buttons-row 
                     .filter__btn 
+                      input#category_0(type="radio", name="category" checked)
+                      label(for="category_0") Хит продаж
                     .filter__btn 
+                      input#category_1(type="radio", name="category")
+                      label(for="category_1") Спец. цена
                     .filter__btn 
+                      input#category_2(type="radio", name="category")
+                      label(for="category_2") Акция
+
+                .filter__block 
+
+                  .filter__title Формат
+
+                  .filter__list.js-more-list
+                    ul 
+                      li 
+                        input#format_0(type="checkbox", name="format")
+                        label(for="format_0") 
+                          span.filter__name Пластинки
+                          span.filter__num 63 000 +
+                      li 
+                        input#format_1(type="checkbox", name="format")
+                        label(for="format_1") 
+                          span.filter__name CD
+                          span.filter__num 12 000 +
+                      li 
+                        input#format_2(type="checkbox", name="format")
+                        label(for="format_2") 
+                          span.filter__name Кассета
+                          span.filter__num 16 000 +
+                      li 
+                        input#format_3(type="checkbox", name="format")
+                        label(for="format_3") 
+                          span.filter__name DVD
+                          span.filter__num 6 000 +
+                      li 
+                        input#format_4(type="checkbox", name="format")
+                        label(for="format_4") 
+                          span.filter__name Бокс-сет
+                          span.filter__num 1 000 +
+                      li 
+                        input#format_5(type="checkbox", name="format")
+                        label(for="format_5") 
+                          span.filter__name Пластинки
+                          span.filter__num 63 000 +
+                      li 
+                        input#format_6(type="checkbox", name="format")
+                        label(for="format_6") 
+                          span.filter__name CD
+                          span.filter__num 12 000 +
+                      li 
+                        input#format_7(type="checkbox", name="format")
+                        label(for="format_7") 
+                          span.filter__name Кассета
+                          span.filter__num 16 000 +
+                      li 
+                        input#format_8(type="checkbox", name="format")
+                        label(for="format_8") 
+                          span.filter__name DVD
+                          span.filter__num 6 000 +
+                      li 
+                        input#format_9(type="checkbox", name="format")
+                        label(for="format_9") 
+                          span.filter__name Бокс-сет
+                          span.filter__num 1 000 +
+
+                  .filter__more.js-more-btn Показать все
+
+                .filter__block 
+
+                  .filter__title Жанры
+
+                  .filter__list.js-more-list
+                    ul 
+                      li 
+                        input#genre_0(type="checkbox", name="genre")
+                        label(for="genre_0") 
+                          span.filter__name Rock
+                          span.filter__num 63 000 +
+                      li 
+                        input#genre_1(type="checkbox", name="genre")
+                        label(for="genre_1") 
+                          span.filter__name Electronic
+                          span.filter__num 12 000 +
+                      li 
+                        input#genre_2(type="checkbox", name="genre")
+                        label(for="genre_2") 
+                          span.filter__name Pop
+                          span.filter__num 16 000 +
+                      li 
+                        input#genre_3(type="checkbox", name="genre")
+                        label(for="genre_3") 
+                          span.filter__name Funk/Soul
+                          span.filter__num 6 000 +
+                      li 
+                        input#genre_4(type="checkbox", name="genre")
+                        label(for="genre_4") 
+                          span.filter__name Jazz
+                          span.filter__num 1 000 +
+                      li 
+                        input#genre_5(type="checkbox", name="genre")
+                        label(for="genre_5") 
+                          span.filter__name Rock
+                          span.filter__num 63 000 +
+                      li 
+                        input#genre_6(type="checkbox", name="genre")
+                        label(for="genre_6") 
+                          span.filter__name Electronic
+                          span.filter__num 12 000 +
+                      li 
+                        input#genre_7(type="checkbox", name="genre")
+                        label(for="genre_7") 
+                          span.filter__name Pop
+                          span.filter__num 16 000 +
+                      li 
+                        input#genre_8(type="checkbox", name="genre")
+                        label(for="genre_8") 
+                          span.filter__name Funk/Soul
+                          span.filter__num 6 000 +
+                      li 
+                        input#genre_9(type="checkbox", name="genre")
+                        label(for="genre_9") 
+                          span.filter__name Jazz
+                          span.filter__num 1 000 +
+                      
+
+                  .filter__more.js-more-btn Показать все
+
+                .filter__block 
+
+                  .filter__title Стили
+
+                  .filter__list.js-more-list
+                    ul 
+                      li 
+                        input#style_0(type="checkbox", name="style")
+                        label(for="style_0") 
+                          span.filter__name Pop-rock
+                          span.filter__num 63 000 +
+                      li 
+                        input#style_1(type="checkbox", name="style")
+                        label(for="style_1") 
+                          span.filter__name House
+                          span.filter__num 12 000 +
+                      li 
+                        input#style_2(type="checkbox", name="style")
+                        label(for="style_2") 
+                          span.filter__name Disco
+                          span.filter__num 16 000 +
+                      li 
+                        input#style_3(type="checkbox", name="style")
+                        label(for="style_3") 
+                          span.filter__name Synth-Pop
+                          span.filter__num 6 000 +
+                      li 
+                        input#style_4(type="checkbox", name="style")
+                        label(for="style_4") 
+                          span.filter__name Soul
+                          span.filter__num 1 000 +
+                      li 
+                        input#style_5(type="checkbox", name="style")
+                        label(for="style_5") 
+                          span.filter__name Pop-rock
+                          span.filter__num 63 000 +
+                      li 
+                        input#style_6(type="checkbox", name="style")
+                        label(for="style_6") 
+                          span.filter__name House
+                          span.filter__num 12 000 +
+                      li 
+                        input#style_7(type="checkbox", name="style")
+                        label(for="style_7") 
+                          span.filter__name Disco
+                          span.filter__num 16 000 +
+                      li 
+                        input#style_8(type="checkbox", name="style")
+                        label(for="style_8") 
+                          span.filter__name Synth-Pop
+                          span.filter__num 6 000 +
+                      li 
+                        input#style_9(type="checkbox", name="style")
+                        label(for="style_9") 
+                          span.filter__name Soul
+                          span.filter__num 1 000 +
+
+                  .filter__more.js-more-btn Показать все
+
+                .filter__block 
+
+                  .filter__title.filter__title--mb10 Стоимость
+
+                  .filter__inputs 
+                    .filter__input-half
+                      .filter__input-text Цена от
+                      .filter__input
+                        input(type="text", name="priceMin")
+                    .filter__input-half
+                      .filter__input-text до
+                      .filter__input
+                        input(type="text", name="priceMax")
+
+                .filter__block 
+
+                  .filter__title.filter__title--mb10 Лейбл
+
+                  .filter__select 
+                    select(name="lable") 
+                      option(value="#" disabled selected) Выбрать лейбл
+                      option(value="#") Лейбл 1
+                      option(value="#") Лейбл 2
+                      option(value="#") Лейбл 3
+                      option(value="#") Лейбл 4
+
+                .filter__buttons 
+                  button(type="submit").filter__button.filter__button--blue Показать
+                  .filter__button.filter__button--white.js-filters__clear Сброс
+
               // /filter
 
             .catalog__main 

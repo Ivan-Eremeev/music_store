@@ -105,6 +105,7 @@
 								</div>
 								<div class="catalog__sort-select"> 
 									<select name="#"> 
+										<option value="#" disabled selected>Сортировать</option>
 										<option value="#">По дате выхода</option>
 										<option value="#">Дешевле</option>
 										<option value="#">Дороже</option>
@@ -115,15 +116,201 @@
 						<div class="catalog__container"> 
 							<div class="catalog__sidebar"> 
 								<!-- filter-->
-								<div class="filter">
+								<form class="filter js-filters" action="#">
 									<div class="filter__buttons"> 
 										<div class="filter__buttons-row"> 
-											<div class="filter__btn"> </div>
-											<div class="filter__btn"> </div>
-											<div class="filter__btn"> </div>
+											<div class="filter__btn"> 
+												<input id="category_0" type="radio" name="category" checked>
+												<label for="category_0">Хит продаж</label>
+											</div>
+											<div class="filter__btn"> 
+												<input id="category_1" type="radio" name="category">
+												<label for="category_1">Спец. цена</label>
+											</div>
+											<div class="filter__btn"> 
+												<input id="category_2" type="radio" name="category">
+												<label for="category_2">Акция</label>
+											</div>
 										</div>
 									</div>
-								</div>
+									<div class="filter__block"> 
+										<div class="filter__title">Формат</div>
+										<div class="filter__list js-more-list">
+											<ul> 
+												<li> 
+													<input id="format_0" type="checkbox" name="format">
+													<label for="format_0"> <span class="filter__name">Пластинки</span><span class="filter__num">63 000 +</span></label>
+												</li>
+												<li> 
+													<input id="format_1" type="checkbox" name="format">
+													<label for="format_1"> <span class="filter__name">CD</span><span class="filter__num">12 000 +</span></label>
+												</li>
+												<li> 
+													<input id="format_2" type="checkbox" name="format">
+													<label for="format_2"> <span class="filter__name">Кассета</span><span class="filter__num">16 000 +</span></label>
+												</li>
+												<li> 
+													<input id="format_3" type="checkbox" name="format">
+													<label for="format_3"> <span class="filter__name">DVD</span><span class="filter__num">6 000 +</span></label>
+												</li>
+												<li> 
+													<input id="format_4" type="checkbox" name="format">
+													<label for="format_4"> <span class="filter__name">Бокс-сет</span><span class="filter__num">1 000 +</span></label>
+												</li>
+												<li> 
+													<input id="format_5" type="checkbox" name="format">
+													<label for="format_5"> <span class="filter__name">Пластинки</span><span class="filter__num">63 000 +</span></label>
+												</li>
+												<li> 
+													<input id="format_6" type="checkbox" name="format">
+													<label for="format_6"> <span class="filter__name">CD</span><span class="filter__num">12 000 +</span></label>
+												</li>
+												<li> 
+													<input id="format_7" type="checkbox" name="format">
+													<label for="format_7"> <span class="filter__name">Кассета</span><span class="filter__num">16 000 +</span></label>
+												</li>
+												<li> 
+													<input id="format_8" type="checkbox" name="format">
+													<label for="format_8"> <span class="filter__name">DVD</span><span class="filter__num">6 000 +</span></label>
+												</li>
+												<li> 
+													<input id="format_9" type="checkbox" name="format">
+													<label for="format_9"> <span class="filter__name">Бокс-сет</span><span class="filter__num">1 000 +</span></label>
+												</li>
+											</ul>
+										</div>
+										<div class="filter__more js-more-btn">Показать все</div>
+									</div>
+									<div class="filter__block"> 
+										<div class="filter__title">Жанры</div>
+										<div class="filter__list js-more-list">
+											<ul> 
+												<li> 
+													<input id="genre_0" type="checkbox" name="genre">
+													<label for="genre_0"> <span class="filter__name">Rock</span><span class="filter__num">63 000 +</span></label>
+												</li>
+												<li> 
+													<input id="genre_1" type="checkbox" name="genre">
+													<label for="genre_1"> <span class="filter__name">Electronic</span><span class="filter__num">12 000 +</span></label>
+												</li>
+												<li> 
+													<input id="genre_2" type="checkbox" name="genre">
+													<label for="genre_2"> <span class="filter__name">Pop</span><span class="filter__num">16 000 +</span></label>
+												</li>
+												<li> 
+													<input id="genre_3" type="checkbox" name="genre">
+													<label for="genre_3"> <span class="filter__name">Funk/Soul</span><span class="filter__num">6 000 +</span></label>
+												</li>
+												<li> 
+													<input id="genre_4" type="checkbox" name="genre">
+													<label for="genre_4"> <span class="filter__name">Jazz</span><span class="filter__num">1 000 +</span></label>
+												</li>
+												<li> 
+													<input id="genre_5" type="checkbox" name="genre">
+													<label for="genre_5"> <span class="filter__name">Rock</span><span class="filter__num">63 000 +</span></label>
+												</li>
+												<li> 
+													<input id="genre_6" type="checkbox" name="genre">
+													<label for="genre_6"> <span class="filter__name">Electronic</span><span class="filter__num">12 000 +</span></label>
+												</li>
+												<li> 
+													<input id="genre_7" type="checkbox" name="genre">
+													<label for="genre_7"> <span class="filter__name">Pop</span><span class="filter__num">16 000 +</span></label>
+												</li>
+												<li> 
+													<input id="genre_8" type="checkbox" name="genre">
+													<label for="genre_8"> <span class="filter__name">Funk/Soul</span><span class="filter__num">6 000 +</span></label>
+												</li>
+												<li> 
+													<input id="genre_9" type="checkbox" name="genre">
+													<label for="genre_9"> <span class="filter__name">Jazz</span><span class="filter__num">1 000 +</span></label>
+												</li>
+											</ul>
+										</div>
+										<div class="filter__more js-more-btn">Показать все</div>
+									</div>
+									<div class="filter__block"> 
+										<div class="filter__title">Стили</div>
+										<div class="filter__list js-more-list">
+											<ul> 
+												<li> 
+													<input id="style_0" type="checkbox" name="style">
+													<label for="style_0"> <span class="filter__name">Pop-rock</span><span class="filter__num">63 000 +</span></label>
+												</li>
+												<li> 
+													<input id="style_1" type="checkbox" name="style">
+													<label for="style_1"> <span class="filter__name">House</span><span class="filter__num">12 000 +</span></label>
+												</li>
+												<li> 
+													<input id="style_2" type="checkbox" name="style">
+													<label for="style_2"> <span class="filter__name">Disco</span><span class="filter__num">16 000 +</span></label>
+												</li>
+												<li> 
+													<input id="style_3" type="checkbox" name="style">
+													<label for="style_3"> <span class="filter__name">Synth-Pop</span><span class="filter__num">6 000 +</span></label>
+												</li>
+												<li> 
+													<input id="style_4" type="checkbox" name="style">
+													<label for="style_4"> <span class="filter__name">Soul</span><span class="filter__num">1 000 +</span></label>
+												</li>
+												<li> 
+													<input id="style_5" type="checkbox" name="style">
+													<label for="style_5"> <span class="filter__name">Pop-rock</span><span class="filter__num">63 000 +</span></label>
+												</li>
+												<li> 
+													<input id="style_6" type="checkbox" name="style">
+													<label for="style_6"> <span class="filter__name">House</span><span class="filter__num">12 000 +</span></label>
+												</li>
+												<li> 
+													<input id="style_7" type="checkbox" name="style">
+													<label for="style_7"> <span class="filter__name">Disco</span><span class="filter__num">16 000 +</span></label>
+												</li>
+												<li> 
+													<input id="style_8" type="checkbox" name="style">
+													<label for="style_8"> <span class="filter__name">Synth-Pop</span><span class="filter__num">6 000 +</span></label>
+												</li>
+												<li> 
+													<input id="style_9" type="checkbox" name="style">
+													<label for="style_9"> <span class="filter__name">Soul</span><span class="filter__num">1 000 +</span></label>
+												</li>
+											</ul>
+										</div>
+										<div class="filter__more js-more-btn">Показать все</div>
+									</div>
+									<div class="filter__block"> 
+										<div class="filter__title filter__title--mb10">Стоимость</div>
+										<div class="filter__inputs"> 
+											<div class="filter__input-half">
+												<div class="filter__input-text">Цена от</div>
+												<div class="filter__input">
+													<input type="text" name="priceMin">
+												</div>
+											</div>
+											<div class="filter__input-half">
+												<div class="filter__input-text">до</div>
+												<div class="filter__input">
+													<input type="text" name="priceMax">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="filter__block"> 
+										<div class="filter__title filter__title--mb10">Лейбл</div>
+										<div class="filter__select"> 
+											<select name="lable"> 
+												<option value="#" disabled selected>Выбрать лейбл</option>
+												<option value="#">Лейбл 1</option>
+												<option value="#">Лейбл 2</option>
+												<option value="#">Лейбл 3</option>
+												<option value="#">Лейбл 4</option>
+											</select>
+										</div>
+									</div>
+									<div class="filter__buttons"> 
+										<button class="filter__button filter__button--blue" type="submit">Показать</button>
+										<div class="filter__button filter__button--white js-filters__clear">Сброс</div>
+									</div>
+								</form>
 								<!-- /filter-->
 							</div>
 							<div class="catalog__main"> </div>

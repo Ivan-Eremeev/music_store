@@ -1,5 +1,212 @@
 /* filter */
 .filter { 
-  
+  &__buttons {
+    margin-bottom: 15px;
+  }
+  &__buttons-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -12px;
+    margin-top: -8px;
+  }
+  &__btn {
+    margin-left: 12px;
+    margin-top: 8px;
+    input {
+      position: absolute;
+      visibility: hidden;
+      &:checked {
+        ~ label {
+          background-color: $blue;
+          border-color: $blue;
+          color: #fff;
+        }
+      }
+    }
+    label {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 20px;
+      border: solid 2px #dddfe0;
+      font-size: 14px;
+      cursor: pointer;
+      user-select: none;
+      transition: 0.3s;
+    }
+  }
+  &__block {
+    margin-bottom: 17px;
+  }
+  &__title {
+    font-size: 18px; 
+    font-weight: 600;
+    &--mb10 {
+      margin-bottom: 10px;
+    }
+  }
+  &__list {
+    margin-bottom: 12px;
+    ul {
+      li {
+        margin: 7px 0;
+        input {
+          position: absolute;
+          visibility: hidden;
+          &:checked {
+            ~ label {
+              .filter__name {
+                color: $blue;
+              }
+            }
+          }
+        }
+        label {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          cursor: pointer;
+          user-select: none;
+          transition: 0.1s;
+        }
+      }
+    }
+  }
+  &__name {
+    text-decoration: underline;
+    transition: 0.1s;
+  }
+  &__num {
+    padding: 5px 10px;
+    border-radius: 10.5px;
+    background-color: #f1f3f5;
+    font-size: 10px;
+  }
+  &__more {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 20px;
+    border: solid 2px #dddfe0;
+    font-size: 14px;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.3s;
+    &:hover {
+      background-color: $blue;
+      border-color: $blue;
+      color: #fff;
+    }
+  }
+  &__inputs {
+    display: flex;
+    border: 1px solid #dddfe0;
+    border-radius: 20px;
+  }
+  &__input-half {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    &:nth-child(1) {
+      border-right: 1px solid #dddfe0;
+    }
+  }
+  &__input-text {
+    padding-left: 14px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+  &__input {
+    input {
+      width: 100%;
+      height: 34px;
+      padding: 0 10px;
+      background-color: transparent;
+      border: none;
+      outline: none;
+    }
+  }
+  &__select {
+    position: relative;
+    select {
+      width: 100%;
+      height: 34px;
+      padding: 0 30px 0 10px;
+      border-radius: 20px;
+      background-color: #fff;
+      border: solid 1px #dddfe0;
+      outline: none;
+      font-size: 14px;
+      cursor: pointer;
+      appearance: none;
+      &::-ms-expand {
+        display: none;
+      }
+    }
+    &:after {
+      content: '';
+      display: block;
+      width: 10px;
+      height: 5px;
+      background-image: url("data:image/svg+xml,%3Csvg width='10' height='5' viewBox='0 0 10 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.220115 0.1912C0.361098 0.0687746 0.552285 0 0.751634 0C0.950983 0 1.14217 0.0687746 1.28315 0.1912L5.00454 3.42372L8.72592 0.1912C8.86771 0.0722442 9.05762 0.00642175 9.25474 0.00790964C9.45186 0.00939752 9.64042 0.0780766 9.7798 0.199154C9.91919 0.320232 9.99826 0.484021 9.99997 0.655244C10.0017 0.826468 9.92591 0.991425 9.78896 1.11459L5.53606 4.8088C5.39508 4.93123 5.20389 5 5.00454 5C4.80519 5 4.614 4.93123 4.47302 4.8088L0.220115 1.11459C0.0791756 0.992127 0 0.826055 0 0.652894C0 0.479733 0.0791756 0.313661 0.220115 0.1912V0.1912Z' fill='%231F2124'/%3E%3C/svg%3E%0A");
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+  }
+  &__buttons {
+    display: flex;
+    margin-top: 50px;
+  }
+  &__button {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.3s;
+    &--blue {
+      background-color: $blue;
+      border-radius: 10px 0 0 10px;
+      color: #fff;
+      &:hover {
+        background-color: #42A0F9;
+      }
+    }
+    &--white {
+      border: 1px solid #dddfe0;
+      border-radius: 0 10px 10px 0;
+      border-left: none;
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+  @media (min-width: $break_sm + 1) {
+    &__btn {
+      label {
+        &:hover {
+          background-color: $blue;
+          border-color: $blue;
+          color: #fff;
+        }
+      }
+    }
+    &__list {
+      ul {
+        li {
+          label {
+            &:hover {
+              .filter__name {
+                transform: translate(2px,0);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 /* /filter */

@@ -25,6 +25,7 @@ $break_xs: 500px;
 // Цвета
 $text: #3e4757;
 $yellow: #ffdd2d;
+$blue: #428bf9;
 
 // Подключение файлов
 @import 'blocks/settings';
@@ -37,4 +38,5 @@ $yellow: #ffdd2d;
 @import 'blocks/menu';
 @import 'blocks/breadcrumbs';
 @import 'blocks/catalog';
+@import 'blocks/filter';
 @import 'blocks/footer';

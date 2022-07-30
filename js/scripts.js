@@ -1,7 +1,7 @@
 window.onload = function () {
 
   // Мобильное меню
-	function dropBlock(btn) {
+	function menu(btn) {
 		var $this = undefined,
 				drop = undefined,
 				close = $('.js-menu-close'),
@@ -29,7 +29,35 @@ window.onload = function () {
       body.removeClass('lock');
 		})
 	}
-	dropBlock($('.js-menu-hamb'));
+	menu($('.js-menu-hamb'));
+
+  // Показать еще в фильтрах
+  function showMoreFilters() {
+    const list = $('.js-more-list');
+    const btn = $('.js-more-btn');
+    list.each(function () {
+      $(this).find('li').each(function (index) {
+        if (index > 4) {
+          $(this).fadeOut();
+        }
+      })
+    })
+    btn.on('click', function () {
+      $(this).fadeOut();
+      $(this).parent().find($('.js-more-list li')).fadeIn();
+    })
+  }
+  showMoreFilters();
+
+  // Очистить фильтр 
+  function clearFilter() {
+    let clearBnt = $('.js-filters__clear');
+    clearBnt.on('click', function () {
+      $(this).closest('.js-filters').find('input').prop('checked', false).val('');
+      $(this).closest('.js-filters').find('select').prop('selectedIndex', 0);
+    })
+  }
+  clearFilter();
 
   // // Swiper
   // if ($('#swiper').length) {
