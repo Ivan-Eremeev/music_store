@@ -27,9 +27,14 @@ block content
       // catalog
       .catalog
         .wrapper 
+
           .catalog__head 
+
             .title Объявления по запросу «Modern talking» в России
               .title__sticker 3 600 результатов
+
+            .catalog__filter-btn.js-menu-hamb(data-menu="filter") Фильтры
+
             form(action="#").catalog__sort 
               .catalog__sort-icon.active
                 input#sort-list(type="radio", name="sort" checked)
@@ -57,7 +62,7 @@ block content
                   option(value="#") Дороже
           .catalog__container 
 
-            .catalog__sidebar 
+            .catalog__sidebar#filter
 
               // filter
               form(action="#").filter.js-filters
