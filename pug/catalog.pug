@@ -278,13 +278,63 @@ block content
                       option(value="#") Лейбл 3
                       option(value="#") Лейбл 4
 
-                .filter__buttons 
+                .filter__btns 
                   button(type="submit").filter__button.filter__button--blue Показать
                   .filter__button.filter__button--white.js-filters__clear Сброс
 
               // /filter
 
             .catalog__main 
+
+              .row
+
+                .catalog__col-list
+
+                  // card-list
+                  .card-list
+                    a(href="#").card-list__img 
+                      img(src="img/albums/img1.jpg", alt="" srcset="img/albums/img1@2x.jpg x2")
+                    .card-list__content 
+                      .card-list__content-left 
+                        .card-list__title 
+                          a(href="#") Various - The Classic Chillout Album 2 (2xCD, Comp)
+                        .card-list__price-row 
+                          .card-list__price 
+                            img(src="img/icons/lightning.png", alt="" srcset="lightning@2x.png x2")
+                            | 199 &#8381;
+                          .card-list__price-delivery 
+                            img(src="img/icons/car.png", alt="", srcset="img/icons/car@2x.png x2")
+                            | 350 &#8381; 
+                            span (из Екатеринбурга)
+                        ul.card-list__list 
+                          li Лейбл: 
+                            span Sony Music TV, Columbia
+                          li Каталожный номер: 
+                            span STVCD129
+                          li Состояние медиа: 
+                            span Very Good Plus (VG+)
+                          li Состояние конверта: 
+                            span Good Plus (G+)
+                        .card-list__text Виниловая пластинка (LP) - MODERN TALKING -1987 ''The Modern Talking Story''  альбомный, Club Edition, Compilation Лейбл: Hansa (14
+                      .card-list__content-right 
+                        .card-list__statistic 
+                          .card-list__statistic-item 
+                            img(src="img/icons/bell.png", alt="" srcset="img/icons/bell@2x.png x2")
+                            | 141 Имеют
+                          .card-list__statistic-item 
+                            img(src="img/icons/bell.png", alt="" srcset="img/icons/bell@2x.png x2")
+                            | 21 Хотят
+                        .card-list__block 
+                          .card-list__subtitle 
+                            a(href="#") QHP Records
+                          .card-list__points 
+                            .card-list__points-percent 
+                              img(src="img/icons/heart.png", alt="", srcset="img/icons/heart@2x.png x2")
+                              | 99.8%
+                            .card-list__points-count 788 оценок
+                          .card-list__text Владивосток, Россия
+                  // /card-list
+
       // /catalog
 
     include core/footer.pug

@@ -72,6 +72,7 @@
   }
   &__sidebar {
     width: 326px;
+    flex-shrink: 0;
     padding: 15px 26px 36px 23px;
     margin-right: 24px;
     border-radius: 15px;
@@ -82,6 +83,15 @@
     padding: 10px 11px 17px;
     border-radius: 15px;
     border: solid 2px #f5f6f8;
+    > .row {
+      margin-top: -10px;
+      > * {
+        padding-top: 10px;
+      }
+    }
+  }
+  &__col-list {
+    @include col(12);
   }
 }
 /* /catalog */
