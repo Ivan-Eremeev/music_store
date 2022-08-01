@@ -33,5 +33,17 @@
       background-color: #42A0F9;
     }
   }
+  &--white {
+    background-color: #fff;
+    color: $blue;
+    border: 2px solid $blue;
+    &:hover {
+      background-color:$blue;
+      color: #fff;
+    }
+  }
+  @media (max-width: $break_sm) {
+    font-size: 16px;
+  }
 }
 /* /btn */

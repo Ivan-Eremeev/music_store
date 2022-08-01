@@ -14,7 +14,9 @@ block content
       // stores
       .stores
         .wrapper 
+
           .title Топ магазины
+
           .stores__slider
             #storesSwiper
               .swiper-wrapper 
@@ -97,5 +99,109 @@ block content
                 .stores__arrow.stores__arrow--next.swiper-button-next
                   img(src="img/icons/arrow-slider.png", alt="", srcset="img/icons/arrow-slider@2x.png x2")
       // /stores
+
+      // categories-rating
+      .categories-rating
+        .wrapper 
+
+          .title Категории и рейтинги
+
+          .row.gy
+            .categories-rating__col 
+              .categories-rating__item 
+                ul.categories-rating__list 
+                  li 
+                    a(href="#") 
+                      .categories-rating__name Пластинки
+                      .categories-rating__num 74 000 +
+                  li 
+                    a(href="#") 
+                      .categories-rating__name CD
+                      .categories-rating__num 12 000 +
+                  li 
+                    a(href="#") 
+                      .categories-rating__name Кассета
+                      .categories-rating__num 88 000 +
+                  li 
+                    a(href="#") 
+                      .categories-rating__name DVD
+                      .categories-rating__num 16 000 +
+                  li 
+                    a(href="#") 
+                      .categories-rating__name Бокс-сет
+                      .categories-rating__num 13 000 +
+                .categories-rating__btn
+                  a(href="#").btn.btn--white.btn--small Посмотреть все форматы
+            .categories-rating__col 
+              .categories-rating__item 
+                ul.categories-rating__list 
+                  li 
+                    a(href="#") 
+                      .categories-rating__name Рок
+                      .categories-rating__num 74 000 +
+                  li 
+                    a(href="#") 
+                      .categories-rating__name Электронная музыка
+                      .categories-rating__num 12 000 +
+                  li 
+                    a(href="#") 
+                      .categories-rating__name Поп
+                      .categories-rating__num 88 000 +
+                  li 
+                    a(href="#") 
+                      .categories-rating__name Фанк / соул
+                      .categories-rating__num 16 000 +
+                  li 
+                    a(href="#") 
+                      .categories-rating__name Джаз
+                      .categories-rating__num 13 000 +
+                .categories-rating__btn
+                  a(href="#").btn.btn--white.btn--small Посмотреть все жанры
+            .categories-rating__col 
+              .categories-rating__item 
+                ul.categories-rating__list 
+                  li 
+                    a(href="#") 
+                      .categories-rating__name Поп-рок
+                      .categories-rating__num 74 000 +
+                  li 
+                    a(href="#") 
+                      .categories-rating__name Хаус
+                      .categories-rating__num 12 000 +
+                  li 
+                    a(href="#") 
+                      .categories-rating__name Диско
+                      .categories-rating__num 88 000 +
+                  li 
+                    a(href="#") 
+                      .categories-rating__name Синти-поп
+                      .categories-rating__num 16 000 +
+                  li 
+                    a(href="#") 
+                      .categories-rating__name Соул
+                      .categories-rating__num 13 000 +
+                .categories-rating__btn
+                  a(href="#").btn.btn--white.btn--small Посмотреть все стили
+            .categories-rating__col 
+              .categories-rating__item 
+                ul.categories-rating__list 
+                  li 
+                    a(href="#") 
+                      .categories-rating__name Топ-10 самых дорогих
+                  li 
+                    a(href="#") 
+                      .categories-rating__name Топ-30 самых популярных
+                  li 
+                    a(href="#") 
+                      .categories-rating__name Топ-20 самых желанных
+                  li 
+                    a(href="#") 
+                      .categories-rating__name Топ-10 самых дешевых
+                  li 
+                    a(href="#") 
+                      .categories-rating__name Топ-20 самых редких
+                .categories-rating__btn
+                  a(href="#").btn.btn--white.btn--small Посмотреть все списки
+      // /categories-rating
 
     include core/footer.pug

@@ -1,6 +1,7 @@
 /* stores */
 .stores { 
   padding-top: 13px;
+  padding-bottom: 10px;
   .title {
     padding-left: 6px;
     margin-bottom: 15px;
@@ -11,6 +12,9 @@
     overflow: hidden;
     .swiper-wrapper {
       margin-bottom: 25px;
+    }
+    .swiper-slide {
+      height: auto;
     }
   }
   &__control {
@@ -55,7 +59,9 @@
     }
   }
   &__item {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     padding: 22px 25px;
     border-radius: 15px;
     background-color: #F5F6F8;
@@ -89,12 +95,18 @@
     margin-bottom: 22px;
   }
   &__rating {
+    margin-top: auto;
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 20px;
   }
   &__btn {
-    
+    align-self: center;
   } 
+  @media (max-width: $break_sm) {
+    &__title {
+      font-size: 22px;
+    }
+  }
 }
 /* /stores */
