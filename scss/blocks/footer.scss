@@ -77,10 +77,11 @@
     }
   }
   &__social {
-    display: flex;
-    flex-wrap: wrap;
+    
   }
   &__social-row {
+    display: flex;
+    flex-wrap: wrap;
     margin-top: -7px;
     margin-left: -7px;
   }
@@ -89,6 +90,13 @@
     width: 40px;
     margin-top: 7px;
     margin-left: 7px;
+    transition: 0.5s;
+    img {
+      display: block;
+    }
+    &:hover {
+      transform: rotate(360deg) scale(1.05);
+    }
   }
   &__bottom {
     padding: 15px 0;
