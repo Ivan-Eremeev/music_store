@@ -33,7 +33,13 @@ block content
             .title Объявления по запросу «Modern talking» в России
               .title__sticker 3 600 результатов
 
-            .catalog__filter-btn.js-menu-hamb(data-menu="filter") Фильтры
+            .catalog__filter-btn.js-menu-hamb(data-menu="filter")
+              svg(width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg")
+                rect(x="1" y="1" width="58" height="16" rx="5")
+                rect(x="1" y="22" width="58" height="16" rx="5")
+                rect(x="1" y="43" width="58" height="16" rx="5")
+
+              | Фильтры
 
             form(action="#").catalog__sort 
               .catalog__sort-icon.active
