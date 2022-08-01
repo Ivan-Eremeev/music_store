@@ -1,6 +1,6 @@
 /* btn */
 .btn { 
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   padding: 14px 22px;
@@ -15,12 +15,22 @@
   img {
     margin-right: 10px;
   }
+  &--small {
+    padding: 10px 20px;
+  }
   &--yellow {
     background-color: $yellow;
     color: #000;
     &:hover {
       background-color: $yellowHov;
       box-shadow: 0 0 10px rgba(255,252,45, 0.5);
+    }
+  }
+  &--blue {
+    background-color: $blue;
+    color: #fff;
+    &:hover {
+      background-color: #42A0F9;
     }
   }
 }

@@ -87,6 +87,15 @@ body {
   ul {
     font-size: 18px;
     margin: 10px 0;
+    li {
+      margin: 10px 0;
+      a {
+        color: $blue;
+        &:hover {
+          color: $blueHov;
+        }
+      }
+    }
   }
 }
 .title {
