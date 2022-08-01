@@ -1,5 +1,101 @@
 /* footer */
 .footer { 
-  
+  .wrapper {
+    max-width: 1330px;
+  }
+  &__top {
+    padding: 50px 0;
+    background-image: linear-gradient(to bottom, #353d4c 1%, #161d2c);
+  }
+  &__col {
+    @include col(3);
+  }
+  &__logo {
+    display: inline-block;
+    max-width: 120px;
+    margin-bottom: 45px;
+  }
+  &__text {
+    color: #fff;
+  }
+  &__title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  &__list {
+    li {
+      margin: 8px 0;
+      a {
+        color: #fff;
+        &:hover {
+          color: $yellow;
+        }
+      }
+    }
+  }
+  &__search {
+    display: flex;
+    max-width: 230px;
+    margin: 34px 0;
+    padding: 3px;
+    background-color: #fff;
+    border-radius: 30px;
+  }
+  &__search-input {
+    flex-grow: 1;
+    input {
+      width: 100%;
+      height: 100%;
+      padding: 0 20px;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: #9aa2b1;
+    }
+  }
+  &__search-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    background-color: $yellow; 
+    border-radius: 100%;
+    cursor: pointer;
+    user-select: none;
+    border: none;
+    outline: none;
+    transition: 0.3s;
+    img {
+      margin-left: 4px;
+    }
+    &:hover {
+      background-color: $yellowHov;
+    }
+  }
+  &__social {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__social-row {
+    margin-top: -7px;
+    margin-left: -7px;
+  }
+  &__social-icon {
+    display: block;
+    width: 40px;
+    margin-top: 7px;
+    margin-left: 7px;
+  }
+  &__bottom {
+    padding: 15px 0;
+    font-size: 14px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+  }
 }
 /* /footer */

@@ -19,7 +19,7 @@
     background-color: $yellow;
     color: #000;
     &:hover {
-      background-color: #FFFC2D;
+      background-color: $yellowHov;
       box-shadow: 0 0 10px rgba(255,252,45, 0.5);
     }
   }
