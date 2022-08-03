@@ -61,12 +61,76 @@
 					<div class="wrapper">
 						<h1>Навигация по страницам</h1>
 						<ul> 
-							<li> <a href="catalog.html">Каталог</a></li>
-							<li> <a href="main.html">Главная</a></li>
-							<li> <a href="modals.html">Модалки</a></li>
+							<li> <a class="open-popup-link" href="#regPopup">Регистрация</a></li>
+							<li> <a class="open-popup-link" href="#enterPopup">Вход</a></li>
+							<li> <a class="open-popup-link" href="#confirmPopup">Подтверждение </a></li>
 						</ul>
 					</div>
 				</div>
+				<!-- popup registration-->
+				<div class="popup mfp-hide" id="regPopup">
+					<div class="popup__container popup__container--reg"> 
+						<div class="popup__title">Регистрация</div>
+						<form class="popup__form" action="#"> 
+							<div class="popup__input"> 
+								<input class="js-mask-tel" type="text" placeholder="Телефон">
+							</div>
+							<div class="popup__btn popup__btn--full"> 
+								<button class="btn btn--yellow" type="submit">Продолжить</button>
+							</div>
+							<div class="popup__question">У вас уже есть аккаунт? <a class="open-popup-link" href="#enterPopup">Войти</a></div>
+						</form>
+					</div>
+				</div>
+				<!-- /popup registration-->
+				<!-- popup enter-->
+				<div class="popup mfp-hide" id="enterPopup">
+					<div class="popup__container popup__container--enter"> 
+						<div class="popup__title">Вход</div>
+						<form class="popup__form" action="#"> 
+							<div class="popup__input"> 
+								<input type="text" placeholder="Телефон или электронная почта">
+							</div>
+							<div class="popup__input"> 
+								<input type="password" placeholder="Пароль">
+								<div class="popup__input-show-password"><img src="img/icons/eye.png" alt="" srcset="img/icons/eye@2x.png x2"></div>
+							</div>
+							<div class="popup__remember">
+								<input class="popup__remember-input" id="remember" type="checkbox" name="remember">
+								<label class="popup__remember-label" for="remember">
+									<div class="popup__remember-checkbox"> </div>
+									<div class="popup__remember-text">Запомнить</div>
+								</label>
+								<div class="popup__remember-link">Забыли пароль?</div>
+							</div>
+							<div class="popup__btn"> 
+								<button class="btn btn--yellow" type="submit">Войти</button>
+							</div>
+						</form>
+						<div class="popup__reglink"> <a class="open-popup-link" href="#regPopup">Зарегистрироваться</a></div>
+						<div class="popup__confirm-text">При входе вы подтверждаете согласие с условиями использования Портала и политикой обработки данных.</div>
+					</div>
+				</div>
+				<!-- /popup enter-->
+				<!-- popup confirm-->
+				<div class="popup mfp-hide" id="confirmPopup">
+					<div class="popup__container popup__container--confirm"> 
+						<div class="popup__title popup__title--mb15">Подтвердите номер телефона</div>
+						<form class="popup__form" action="#"> 
+							<div class="popup__text">Введите проверочный код, <br>отправленный на +7 XXX XXX-XX-XX.</div>
+							<div class="popup__input"> 
+								<input type="text" placeholder="Код подтверждения">
+							</div>
+							<div class="popup__code">
+								 Код придет через 00:53 <span class="popup__code-link">Получить новый код</span></div>
+							<div class="popup__buttons">
+								<button class="btn btn--yellow" type="submit">Подтвердить</button>
+								<div class="btn btn--popup">Изменить номер</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				<!-- /popup confirm-->
 			</div>
 			<!-- footer-->
 			<footer class="footer">

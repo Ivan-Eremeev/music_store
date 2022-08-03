@@ -6,12 +6,14 @@ window.onload = function () {
 				drop = undefined,
 				close = $('.js-menu-close'),
         body = $('body');
+        backBlur = $('.back-blur');
 		btn.on('click', function () {
 			$this = $(this);
 			drop = $('#' + $this.data('menu'));
 			$this.toggleClass('is-active');
 			drop.toggleClass('open');
       body.toggleClass('lock');
+      backBlur.toggleClass('active');
 			$(document).mouseup(function (e) {
 				if (!$this.is(e.target)
 					&& $this.has(e.target).length === 0
@@ -20,6 +22,7 @@ window.onload = function () {
 					$this.removeClass('is-active');
 					drop.removeClass('open');
           body.removeClass('lock');
+          backBlur.removeClass('active');
 				}
 			});
 		})
@@ -94,10 +97,34 @@ window.onload = function () {
   //   position: 'right top',
   // });
 
-  // // Magnific Popup
-  // $('.open-popup-link').magnificPopup({
-  //   mainClass: 'mfp-fade'
-  // });
+  // Magnific Popup
+  $('.open-popup-link').magnificPopup({
+    mainClass: 'mfp-fade',
+    callbacks: {
+      open: function () {
+        $('.back-blur').addClass('active');
+      },
+      close: function () {
+        $('.back-blur').removeClass('active');
+      }
+    }
+  });
+
+  // JQuery Inputmask
+  $('.js-mask-tel').inputmask("+7 999 999-99-99");
+
+  // Показать пароль
+  $('.popup__input-show-password').on('click', function () {
+    let $this = $(this);
+    let input = $this.siblings('input');
+    if (input.attr('type') == 'password') {
+      $this.addClass('active');
+      input.attr('type', 'text');
+    }else {
+      $this.removeClass('active');
+      input.attr('type', 'password');
+    }
+  })
 
   // // Табы
 	// function tabs() {

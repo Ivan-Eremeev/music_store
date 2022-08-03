@@ -119,4 +119,17 @@ body {
     }
   }
 }
+.back-blur {
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  backdrop-filter: blur(3px);
+  visibility: hidden;
+  &.active {
+    visibility: visible;
+  }
+}
 /* /settings */

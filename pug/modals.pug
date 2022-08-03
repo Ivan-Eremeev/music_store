@@ -1,0 +1,78 @@
+extends core/base.pug
+
+block title 
+  title Навигация по страницам
+
+block content
+
+  .page 
+
+    include core/header.pug
+
+    .content 
+
+      .navpage 
+        .wrapper
+          h1 Навигация по страницам
+          ul 
+            li 
+              a(href="#regPopup").open-popup-link Регистрация
+            li 
+              a(href="#enterPopup").open-popup-link Вход
+            li 
+              a(href="#confirmPopup").open-popup-link Подтверждение 
+
+      // popup registration
+      #regPopup.popup.mfp-hide
+        .popup__container.popup__container--reg 
+          .popup__title Регистрация
+          form(action="#").popup__form 
+            .popup__input 
+              input(type="text" placeholder="Телефон").js-mask-tel
+            .popup__btn.popup__btn--full 
+              button(type="submit").btn.btn--yellow Продолжить
+            .popup__question У вас уже есть аккаунт? 
+              a(href="#enterPopup").open-popup-link Войти
+      // /popup registration
+
+      // popup enter
+      #enterPopup.popup.mfp-hide
+        .popup__container.popup__container--enter 
+          .popup__title Вход
+          form(action="#").popup__form 
+            .popup__input 
+              input(type="text" placeholder="Телефон или электронная почта")
+            .popup__input 
+              input(type="password" placeholder="Пароль")
+              .popup__input-show-password
+                img(src="img/icons/eye.png", alt="" srcset="img/icons/eye@2x.png x2")
+            .popup__remember
+              input#remember(type="checkbox", name="remember").popup__remember-input
+              label(for="remember").popup__remember-label
+                .popup__remember-checkbox 
+                .popup__remember-text Запомнить
+              .popup__remember-link Забыли пароль?
+            .popup__btn 
+              button(type="submit").btn.btn--yellow Войти
+          .popup__reglink 
+            a(href="#regPopup").open-popup-link Зарегистрироваться
+          .popup__confirm-text При входе вы подтверждаете согласие с условиями использования Портала и политикой обработки данных.
+      // /popup enter
+
+      // popup confirm
+      #confirmPopup.popup.mfp-hide
+        .popup__container.popup__container--confirm 
+          .popup__title.popup__title--mb15 Подтвердите номер телефона
+          form(action="#").popup__form 
+            .popup__text Введите проверочный код, <br>отправленный на +7 XXX XXX-XX-XX.
+            .popup__input 
+              input(type="text" placeholder="Код подтверждения")
+            .popup__code 
+              | Код придет через 00:53 
+              span.popup__code-link Получить новый код
+            .popup__buttons
+              button(type="submit").btn.btn--yellow Подтвердить
+              .btn.btn--popup Изменить номер
+      // /popup confirm
+
+    include core/footer.pug
