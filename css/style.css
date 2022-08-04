@@ -86,6 +86,20 @@ h1, h2, h3 {
   src: url("../fonts/ProximaNova-Bold.eot");
   src: url("../fonts/ProximaNova-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Bold.woff") format("woff"), url("../fonts/ProximaNova-Bold.woff2") format("woff2"), url("../fonts/ProximaNova-Bold.ttf") format("truetype"), url("../fonts/ProximaNova-Bold.svg") format("svg");
 }
+@font-face {
+  font-family: "HelveticaNeue";
+  font-weight: 500;
+  font-style: normal;
+  src: url("../fonts/HelveticaNeueCyr-Medium.eot");
+  src: url("../fonts/HelveticaNeueCyr-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaNeueCyr-Medium.woff") format("woff"), url("../fonts/HelveticaNeueCyr-Medium.woff2") format("woff2"), url("../fonts/HelveticaNeueCyr-Medium.ttf") format("truetype"), url("../fonts/HelveticaNeueCyr-Medium.svg") format("svg");
+}
+@font-face {
+  font-family: "HelveticaNeue";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../fonts/HelveticaNeueCyr-Bold.eot");
+  src: url("../fonts/HelveticaNeueCyr-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaNeueCyr-Bold.woff") format("woff"), url("../fonts/HelveticaNeueCyr-Bold.woff2") format("woff2"), url("../fonts/HelveticaNeueCyr-Bold.ttf") format("truetype"), url("../fonts/HelveticaNeueCyr-Bold.svg") format("svg");
+}
 /* settings */
 a {
   -webkit-transition: 0.3s;
@@ -2347,6 +2361,11 @@ body.lock {
   font-weight: 600;
   color: #3e4757;
   white-space: normal;
+}
+.card-list__rub {
+  font-family: "HelveticaNeue", sans-serif;
+  font-weight: bold;
+  margin-left: 5px;
 }
 .card-list__list {
   font-size: 14px;

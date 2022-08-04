@@ -22,6 +22,10 @@ $break_xs: 500px;
 @include font-face("Proxima Nova", "../fonts/ProximaNova-Semibold", 600, normal);
 @include font-face("Proxima Nova", "../fonts/ProximaNova-Bold", bold, normal);
 
+@include font-face("HelveticaNeue", "../fonts/HelveticaNeueCyr-Medium", 500,
+normal);
+@include font-face("HelveticaNeue", "../fonts/HelveticaNeueCyr-Bold", bold, normal);
+
 // Цвета
 $text: #3e4757;
 $yellow: #ffdd2d;
