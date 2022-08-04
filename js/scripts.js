@@ -27,12 +27,46 @@ window.onload = function () {
 			});
 		})
 		close.on('click', function () {
-			$('[data-drop="' + $(this).data('drop') +'"]').removeClass('is-active');
+			$('[data-menu="' + $(this).data('drop') +'"]').removeClass('is-active');
 			$('#' + $(this).data('drop')).removeClass('open');
       body.removeClass('lock');
+      backBlur.removeClass('active');
 		})
 	}
 	menu($('.js-menu-hamb'));
+
+  // Открытие подменю
+  function openSubmenu() {
+    let item = $('.menu__link--childin');
+    let submenu = $('.menu__submenu');
+    item.on('click', function (e) {
+      e.preventDefault();
+      let itemCurrent = $(this);
+      let submenuCurrent = itemCurrent.siblings('.menu__submenu');
+      itemCurrent.toggleClass('active');
+      submenuCurrent.toggleClass('open');
+      $(document).mouseup(function (e) {
+        if (!itemCurrent.is(e.target)
+          && itemCurrent.has(e.target).length === 0
+          && !submenuCurrent.is(e.target)
+          && submenuCurrent.has(e.target).length === 0) {
+          itemCurrent.removeClass('is-active');
+          submenuCurrent.removeClass('open');
+        }
+      });
+      if ($(window).width() <= 768) {
+        submenuCurrent.stop().slideToggle(300);
+      }
+    });
+    $(window).resize(function () {
+      if ($(window).width() > 768) {
+        submenu.show();
+      }else {
+        submenu.hide();
+      }
+    });
+  }
+  openSubmenu();
 
   // Показать еще в фильтрах
   function showMoreFilters() {
@@ -182,5 +216,34 @@ window.onload = function () {
 	// 	})
 	// }
 	// dropBlock($('.js-drop-btn'));
+
+  // Выпадайки при клике по кнопке slide
+	// Задать блокам выпадайкам айдишник совпадающий с data-drop="" в кнопке для этого блока
+	// Задать кнопкам .js-drop-btn и data-drop="" с айдишником блока выпадайки
+	function dropBlockSlide(btn) {
+		var $this = undefined,
+				drop = undefined,
+				close = $('.js-drop-close');
+		btn.on('click', function () {
+			$this = $(this);
+			drop = $('#' + $this.data('drop'));
+			$this.toggleClass('is-active');
+			drop.stop().slideToggle(200);
+			$(document).mouseup(function (e) {
+				if (!$this.is(e.target)
+					&& $this.has(e.target).length === 0
+					&& !drop.is(e.target)
+					&& drop.has(e.target).length === 0) {
+					$this.removeClass('is-active');
+					drop.stop().slideUp(200);
+				}
+			});
+		})
+		close.on('click', function () {
+			$('[data-drop="' + $(this).data('drop') +'"]').removeClass('is-active');
+      $('#' + $(this).data('drop')).stop().slideUp(200);
+		})
+	}
+	dropBlockSlide($('.js-drop-btn-slide'));
 
 }

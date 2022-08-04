@@ -20,6 +20,7 @@
     max-width: 780px;
     margin-left: auto;
     flex-grow: 1;
+    position: relative;
   }
   &__search-block {
     display: flex;
@@ -27,7 +28,10 @@
     align-items: center;
     padding: 12px;
     background-color: #fff;
+    box-shadow: 0 2px 20px 0 rgba(28, 35, 50, 0.5);
     border-radius: 70px;
+    position: relative;
+    z-index: 3;
   }
   &__search-input {
     align-self: stretch;
@@ -67,6 +71,11 @@
     display: flex;
     align-items: center;
     margin-left: 54px;
+    position: relative;
+    &--enter {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
   }
   &__enter {
     padding: 14px 0;
@@ -88,6 +97,181 @@
   }
   &__hamb {
     display: none;
+  }
+  &__location-drop {
+    display: none;
+    min-width: 320px;
+    max-height: calc(100vh - 100px);
+    padding: 50px 12px 30px;
+    border-radius: 0 0 30px 30px;
+    box-shadow: 0 0 20px 0 #8993a4;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 2;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+  }
+  &__location-input {
+    position: relative;
+    input {
+      width: 100%;
+      padding: 13px 30px 12px 21px;
+      border-radius: 20px;
+      border: solid 2px #dddfe0;
+      font-size: 14px;
+      &::placeholder {
+        color: $text;
+      }
+    }
+  }
+  &__location-input-cross {
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    top: 50%;
+    right: 13px;
+    transform: translate(0,-50%);
+    cursor: pointer;
+    user-select: none;
+    &:after,&:before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: #8993a4;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+    }
+    &:after {
+      transform: translate(-50%,-50%) rotate(45deg);
+    }
+    &:before {
+      transform: translate(-50%,-50%) rotate(-45deg);
+    }
+  }
+  &__location-list {
+    font-size: 14px;
+    margin: 10px;
+    li {
+      margin: 10px 0;
+      cursor: pointer;
+      user-select: none;
+      transition: 0.1s;
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+  &__location-btn {
+    display: inline-block;
+    min-width: 106px;
+    padding: 6px 10px;
+    border-radius: 20px;
+    background-color: #fff;
+    border: solid 2px $blue;
+    outline: none;
+    font-size: 14px;
+    color: $blue;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.3s;
+    &:hover {
+      background-color: $blue;
+      color: #fff;
+    }
+  }
+  &__login-flex {
+    display: flex;
+    align-items: center;
+    max-width: 300px;
+    position: relative;
+    z-index: 3;
+  }
+  &__login-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    overflow: hidden;
+  }
+  &__login-name {
+    margin: 0 22px;
+    font-size: 18px;
+    color: #fff;
+  }
+  &__login-hamb {
+    .hamburger-inner {
+      background-color: #fff;
+      &:after, &:before {
+        background-color: #fff;
+      }
+    }
+    &.is-active {
+      .hamburger-inner {
+        background-color: #fff;
+        &:after,
+        &:before {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+  &__login-drop {
+    display: none;
+    width: 100%;
+    padding: 130px 20px 40px 50px;
+    background-image: linear-gradient(to bottom, #8993a4 1%, #161d2c);
+    border-radius: 0 0 40px 40px;
+    color: #fff;
+    position: absolute;
+    top: -50px;
+    left: 0;
+    z-index: 2;
+  }
+  &__login-statistic {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    img {
+      margin-right: 5px;
+    }
+    span {
+      font-size: 12px;
+      text-decoration: underline;
+      margin-left: 5px;
+    }
+  }
+  &__login-list {
+    li {
+      margin: 10px 0;
+      a {
+        color: #fff;
+        border-bottom: 1px solid #fff;
+        transition: .1s;
+        &:hover {
+          border-color: transparent;
+        }
+      }
+    }
+  }
+  &__login-exit {
+    display: inline-block;
+    margin-top: 30px;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    transition: 0.1s;
+    cursor: pointer;
+    user-select: none;
+    &:hover {
+      border-color: transparent;
+    }
   }
   @media (max-width: $break_md) {
     &__search-btn {
@@ -130,6 +314,66 @@
     &__search-input {
       input {
         padding: 0 10px;
+      }
+    }
+    &__location-drop {
+      min-width: 0;
+      width: 100%;
+    }
+    &__login-flex {
+      max-width: none;
+    }
+    &__login-name {
+      color: $text;
+    }
+    &__login-hamb {
+      margin-left: auto;
+      .hamburger-inner {
+        background-color: $text;
+        &:after,
+        &:before {
+          background-color: $text;
+        }
+      }
+      &.is-active {
+        .hamburger-inner {
+          background-color: $text;
+          &:after,
+          &:before {
+            background-color: $text;
+          }
+        }
+      }
+    }
+    &__login-drop {
+      max-height: 100vh;
+      top: 0;
+      padding: 60px 20px 30px;
+      border-radius: 0 0 30px 30px;
+      overflow-y: auto;
+      z-index: 3;
+    }
+    &__login-close {
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      &:after,&:before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+      }
+      &:after {
+        transform: translate(-50%,-50%) rotate(45deg);
+      }
+      &:before {
+        transform: translate(-50%,-50%) rotate(-45deg);
       }
     }
   }

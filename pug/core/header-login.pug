@@ -1,0 +1,138 @@
+// header
+header.header 
+
+  .header__top
+    .wrapper
+
+      a(href="#").header__logo 
+        img(src="img/logo.svg", alt="")
+      
+      .header__search 
+        form(action="#").header__search-block 
+          .header__search-input 
+            input(type="text")
+          .header__search-location.js-drop-btn-slide(data-drop="location")
+            | По всей России
+            img(src="img/icons/arrow.svg", alt="") 
+          button(type="submit").header__search-btn.btn.btn--yellow 
+            img(src="img/icons/search.png", alt="", srcset="img/icons/search@2x.png 2x")
+            span Искать
+
+        form(action="#").header__location-drop#location
+          .header__location-input 
+            input(type="text" placeholder="Введите город, регион, Россия")
+            .header__location-input-cross
+          ul.header__location-list 
+            li Екатеринбург
+            li Россия
+            li Москва
+            li Екатеринбург, Свердловская область
+            li Свердловская область
+          button(type="submit").header__location-btn Выбрать
+
+      .header__hamb.hamburger.hamburger--squeeze.js-menu-hamb(data-menu="mobileMenu")
+        .hamburger-box
+          .hamburger-inner
+      
+      .header__login.header__login--enter 
+        .header__login-flex 
+          .header__login-icon 
+            img(src="img/user-avatar.jpg", alt="", srcset="img/user-avatar@2x.jpg x2")
+          .header__login-name Евгений
+          .header__login-hamb.hamburger.hamburger--squeeze.js-drop-btn-slide(data-drop="userMenu")
+            .hamburger-box
+              .hamburger-inner
+        .header__login-drop#userMenu 
+          .header__login-statistic  
+            img(src="img/icons/heart.png", alt="", srcset="img/icons/heart@2x.png x2")
+            | 92.8%
+            span 208 отзывов
+          ul.header__login-list 
+            li 
+              a(href="#") Мой кошелёк
+            li 
+              a(href="#") Мои объявления
+            li 
+              a(href="#") Добавить объявление
+            li 
+              a(href="#") Мои заказы
+            li 
+              a(href="#") Мои отзывы
+            li 
+              a(href="#") Избранное
+            li 
+              a(href="#") Хочу купить
+            li 
+              a(href="#") Моя коллекция
+            li 
+              a(href="#") Настройки
+          a(href="#").header__login-exit Выйти
+
+  .header__bottom
+    .wrapper 
+
+      .menu#mobileMenu
+        nav.menu__nav 
+          ul.menu__list 
+            li.menu__item
+              a(href="#").menu__link Новости
+            li.menu__item
+              a(href="#").menu__link.menu__link--active В продаже
+                .menu__link-sticker 120 000 +
+            li.menu__item
+              a(href="#").menu__link.menu__link--childin Дискография 
+              ul.menu__submenu 
+                li.menu__subitem 
+                  a(href="#").menu__sublink Дискография1
+                li.menu__subitem 
+                  a(href="#").menu__sublink Дискография2
+                li.menu__subitem 
+                  a(href="#").menu__sublink Дискография3
+            li.menu__item
+              a(href="#").menu__link Магазины
+            li.menu__item
+              a(href="#").menu__link Статьи
+            li.menu__item
+              a(href="#").menu__link Форум
+            li.menu__item
+              a(href="#").menu__link О портале
+
+        .menu__login 
+          .header__login-flex 
+            .header__login-icon 
+              img(src="img/user-avatar.jpg", alt="", srcset="img/user-avatar@2x.jpg x2")
+            .header__login-name Евгений
+            .header__login-hamb.hamburger.hamburger--squeeze.js-drop-btn-slide(data-drop="userMenuMobile")
+              .hamburger-box
+                .hamburger-inner
+          .header__login-drop#userMenuMobile 
+            .header__login-statistic  
+              img(src="img/icons/heart.png", alt="", srcset="img/icons/heart@2x.png x2")
+              | 92.8%
+              span 208 отзывов
+            ul.header__login-list 
+              li 
+                a(href="#") Мой кошелёк
+              li 
+                a(href="#") Мои объявления
+              li 
+                a(href="#") Добавить объявление
+              li 
+                a(href="#") Мои заказы
+              li 
+                a(href="#") Мои отзывы
+              li 
+                a(href="#") Избранное
+              li 
+                a(href="#") Хочу купить
+              li 
+                a(href="#") Моя коллекция
+              li 
+                a(href="#") Настройки
+
+            a(href="#").header__login-exit Выйти
+
+            .header__login-close.js-drop-close(data-drop="userMenuMobile")
+
+        .menu__close.js-menu-close(data-drop="mobileMenu")
+//	/header

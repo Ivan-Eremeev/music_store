@@ -103,6 +103,12 @@
   &__btn {
     align-self: center;
   } 
+  @media (max-width: $break_xl) {
+    &__slider {
+      padding: 20px 10px;
+      margin: -20px -10px;
+    }
+  }
   @media (max-width: $break_sm) {
     &__title {
       font-size: 22px;

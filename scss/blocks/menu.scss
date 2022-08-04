@@ -1,5 +1,6 @@
 /* menu */
 .menu { 
+  position: relative;
   &__nav {
     
   }
@@ -8,7 +9,6 @@
     justify-content: space-between;
     margin: 0 -10px;
     font-size: 18px;
-    overflow-y: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
     &::-webkit-scrollbar {
@@ -67,8 +67,60 @@
     top: 10px;
     left: calc(100% + 5px)
   }
+  &__submenu {
+    padding: 10px 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 20px 0 #8993a4;
+    background-color: #fff;
+    transform: translate(0,20px);
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: calc(100% + 10px);
+    z-index: 2;
+    transition: 0.3s;
+    &.open {
+      transform: translate(0,0);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  &__subitem {
+
+  }
+  &__sublink {
+    display: block;
+    padding: 10px 0;
+    color: #000;
+    position: relative;
+    &:after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 3px;
+      background-color: #666;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      transition: 0.3s;
+    }
+  }
+  &__close {
+    display: none;
+  }
+  &__login {
+    display: none;
+  }
   @media (min-width: $break_sm + 1) {
     &__link {
+      &:hover {
+        &:after {
+          width: 100%;
+          left: 0;
+        }
+      }
+    }
+    &__sublink {
       &:hover {
         &:after {
           width: 100%;
@@ -82,7 +134,7 @@
     flex-direction: column;
     width: 100%;
     max-width: 500px;
-    padding: 30px 0;
+    padding: 70px 0 30px;
     background-color: #fff;
     box-shadow: 0 0 20px rgba(0,0,0,.2);
     position: fixed;
@@ -90,7 +142,7 @@
     bottom: 0;
     left: -600px;
     transition: 0.5s;
-    z-index: 10;
+    z-index: 12;
     &__nav {
       flex-grow: 1;
       overflow-y: auto;
@@ -104,6 +156,7 @@
     &__list {
       display: block;
       margin: 0;
+      overflow-y: auto;
     }
     &__item {
       &:last-child {
@@ -130,6 +183,47 @@
     }
     &__link-sticker {
       display: none;
+    }
+    &__submenu {
+      display: none;
+      width: 100%;
+      padding: 0 20px;
+      position: static;
+      border-radius: 0;
+      box-shadow: none;
+      opacity: 1;
+      transform: translate(0,0);
+      visibility: visible;
+      transition: none;
+    }
+    &__close {
+      display: block;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      &:after,
+      &:before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: $text;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+      }
+      &:after {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+      &:before {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+    &__login {
+      display: block;
+      padding: 10px 10px 0 20px;
     }
     &.open {
       left: 0;
