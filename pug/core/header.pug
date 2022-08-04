@@ -10,7 +10,7 @@ header.header
       .header__search 
         form(action="#").header__search-block 
           .header__search-input 
-            input(type="text")
+            input(type="text").js-drop-input(data-drop="searchMenu")
           .header__search-location.js-drop-btn-slide(data-drop="location")
             | По всей России
             img(src="img/icons/arrow.svg", alt="") 
@@ -29,6 +29,107 @@ header.header
             li Екатеринбург, Свердловская область
             li Свердловская область
           button(type="submit").header__location-btn Выбрать
+
+        .header__search-drop#searchMenu
+          .header__search__tabs.js-tabs
+            ul.header__search-triggers 
+              li 
+                a(href="#tab_1").header__search-trigger.js-tabs-trigger.active В продаже
+              li 
+                a(href="#tab_2").header__search-trigger.js-tabs-trigger Релизы
+              li 
+                a(href="#tab_3").header__search-trigger.js-tabs-trigger Артисты
+              li 
+                a(href="#tab_4").header__search-trigger.js-tabs-trigger Лейблы
+            div.header__search-contents
+              .js-tabs-content.header__search-content.open(data-href="#tab_1")
+                ul.header__search-list 
+                  li 
+                    a(href="#") Modern talking
+                  li
+                    a(href="#") Modern talking пластинка
+                  li
+                    a(href="#") Modern talking CD
+                  li
+                    a(href="#") Modern talking ready for romance
+                  li
+                    a(href="#") Modern talking back for good
+                  li
+                    a(href="#") Modern talking alone
+                  li
+                    a(href="#") Modern
+                  li
+                    a(href="#") Modern romance
+              .js-tabs-content.header__search-content(data-href="#tab_2")
+                .header__search-items 
+                  a(href="#").header__search-item 
+                    .header__search-item-img 
+                      img(src="img/albums/img6.jpg", alt="" srcset="img/albums/img6@2x.jpg x2")
+                    .header__search-item-content 
+                      .header__search-item-name Cirkus Modern LP, Album
+                      .header__search-item-sub Cirkus Modern
+                  a(href="#").header__search-item 
+                    .header__search-item-img 
+                      img(src="img/albums/img7.jpg", alt="" srcset="img/albums/img7@2x.jpg x2")
+                    .header__search-item-content 
+                      .header__search-item-name Cirkus Modern LP, Album
+                      .header__search-item-sub Cirkus Modern
+                  a(href="#").header__search-item 
+                    .header__search-item-img 
+                      img(src="img/albums/img8.jpg", alt="" srcset="img/albums/img8@2x.jpg x2")
+                    .header__search-item-content 
+                      .header__search-item-name Cirkus Modern LP, Album
+                      .header__search-item-sub Cirkus Modern
+                  a(href="#").header__search-item 
+                    .header__search-item-img 
+                      img(src="img/albums/img9.jpg", alt="" srcset="img/albums/img9@2x.jpg x2")
+                    .header__search-item-content 
+                      .header__search-item-name Cirkus Modern LP, Album
+                      .header__search-item-sub Cirkus Modern
+                  a(href="#").header__search-item 
+                    .header__search-item-img 
+                      img(src="img/albums/img10.jpg", alt="" srcset="img/albums/img10@2x.jpg x2")
+                    .header__search-item-content 
+                      .header__search-item-name Cirkus Modern LP, Album
+                      .header__search-item-sub Cirkus Modern
+                .header__search-btn-row 
+                  .header__search-tabs-btn Все релизы
+              .js-tabs-content.header__search-content(data-href="#tab_3")
+                ul.header__search-list 
+                  li 
+                    a(href="#") Modern talking
+                  li
+                    a(href="#") Modern talking пластинка
+                  li
+                    a(href="#") Modern talking CD
+                  li
+                    a(href="#") Modern talking ready for romance
+                  li
+                    a(href="#") Modern talking back for good
+                  li
+                    a(href="#") Modern talking alone
+                  li
+                    a(href="#") Modern
+                  li
+                    a(href="#") Modern romance
+              .js-tabs-content.header__search-content(data-href="#tab_4")
+                ul.header__search-list 
+                  li 
+                    a(href="#") Modern talking
+                  li
+                    a(href="#") Modern talking пластинка
+                  li
+                    a(href="#") Modern talking CD
+                  li
+                    a(href="#") Modern talking ready for romance
+                  li
+                    a(href="#") Modern talking back for good
+                  li
+                    a(href="#") Modern talking alone
+                  li
+                    a(href="#") Modern
+                  li
+                    a(href="#") Modern romance
 
       .header__hamb.hamburger.hamburger--squeeze.js-menu-hamb(data-menu="mobileMenu")
         .hamburger-box
