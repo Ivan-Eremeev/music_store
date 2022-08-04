@@ -6,14 +6,12 @@ window.onload = function () {
 				drop = undefined,
 				close = $('.js-menu-close'),
         body = $('body');
-        backBlur = $('.back-blur');
 		btn.on('click', function () {
 			$this = $(this);
 			drop = $('#' + $this.data('menu'));
 			$this.toggleClass('is-active');
 			drop.toggleClass('open');
       body.toggleClass('lock');
-      backBlur.toggleClass('active');
 			$(document).mouseup(function (e) {
 				if (!$this.is(e.target)
 					&& $this.has(e.target).length === 0
@@ -22,7 +20,6 @@ window.onload = function () {
 					$this.removeClass('is-active');
 					drop.removeClass('open');
           body.removeClass('lock');
-          backBlur.removeClass('active');
 				}
 			});
 		})
@@ -30,7 +27,6 @@ window.onload = function () {
 			$('[data-menu="' + $(this).data('drop') +'"]').removeClass('is-active');
 			$('#' + $(this).data('drop')).removeClass('open');
       body.removeClass('lock');
-      backBlur.removeClass('active');
 		})
 	}
 	menu($('.js-menu-hamb'));
@@ -190,19 +186,24 @@ window.onload = function () {
 				drop = undefined,
 				close = $('.js-drop-close');
 		btn.on('click', function () {
-			$this = $(this);
-			drop = $('#' + $this.data('drop'));
-			$this.toggleClass('is-active');
-			drop.stop().slideToggle(200);
-			$(document).mouseup(function (e) {
-				if (!$this.is(e.target)
-					&& $this.has(e.target).length === 0
-					&& !drop.is(e.target)
-					&& drop.has(e.target).length === 0) {
-					$this.removeClass('is-active');
-					drop.stop().slideUp(200);
-				}
-			});
+      $this = $(this);
+      drop = $('#' + $this.data('drop'));
+      if (!$(this).hasClass('is-active')) {
+        $this.addClass('is-active');
+        drop.stop().slideDown(200);
+        $(document).mouseup(function (e) {
+          if (!$this.is(e.target)
+            && $this.has(e.target).length === 0
+            && !drop.is(e.target)
+            && drop.has(e.target).length === 0) {
+            $this.removeClass('is-active');
+            drop.stop().slideUp(200);
+          }
+        });
+      }else {
+        $this.removeClass('is-active');
+        drop.stop().slideUp(200);
+      }
 		})
 		close.on('click', function () {
 			$('[data-drop="' + $(this).data('drop') +'"]').removeClass('is-active');
@@ -214,13 +215,14 @@ window.onload = function () {
   // Выпадайки при фокусе по input
   function dropBlockFocus(btn) {
     var $this = undefined,
-      drop = undefined,
-      close = $('.js-drop-close');
+        drop = undefined,
+        backBlur = $('.back-blur');
     btn.on('focus', function () {
       $this = $(this);
       drop = $('#' + $this.data('drop'));
       $this.addClass('is-active');
       drop.stop().slideDown(200);
+      backBlur.addClass('active');
       $(document).mouseup(function (e) {
         if (!$this.is(e.target)
           && $this.has(e.target).length === 0
@@ -228,12 +230,9 @@ window.onload = function () {
           && drop.has(e.target).length === 0) {
           $this.removeClass('is-active');
           drop.stop().slideUp(200);
+          backBlur.removeClass('active');
         }
       });
-    })
-    close.on('click', function () {
-      $('[data-drop="' + $(this).data('drop') + '"]').removeClass('is-active');
-      $('#' + $(this).data('drop')).stop().slideUp(200);
     })
   }
   dropBlockFocus($('.js-drop-input'));
