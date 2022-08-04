@@ -945,6 +945,9 @@ body.lock {
   margin-left: 20px;
   font-weight: 600;
 }
+.header__search-btn img {
+  width: 20px;
+}
 .header__login {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2271,6 +2274,7 @@ body.lock {
   white-space: nowrap;
 }
 .card-list__price-delivery img {
+  width: 17px;
   -ms-flex-negative: 0;
   flex-shrink: 0;
   margin-right: 5px;
@@ -2326,6 +2330,7 @@ body.lock {
   align-items: center;
 }
 .card-list__statistic-item img {
+  width: 17px;
   margin-right: 6px;
 }
 .card-list__statistic-item:nth-child(2) {
@@ -2490,16 +2495,19 @@ body.lock {
   position: relative;
 }
 .pagination__arrow img {
+  width: 17px;
   position: absolute;
   top: 50%;
   left: 50%;
 }
 .pagination__arrow--prev img {
+  margin-top: -1px;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 .pagination__arrow--next img {
+  margin-top: 1px;
   -webkit-transform: translate(-50%, -50%) rotate(180deg);
   -ms-transform: translate(-50%, -50%) rotate(180deg);
   transform: translate(-50%, -50%) rotate(180deg);
@@ -2666,13 +2674,20 @@ body.lock {
   display: block;
   display: none;
 }
-.stores__arrow img {
+.stores__arrow svg {
   display: block;
+  fill: #d8d8d8;
+  -webkit-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s;
 }
-.stores__arrow--next img {
+.stores__arrow--next svg {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
+}
+.stores__arrow:hover svg {
+  fill: #428bf9;
 }
 .stores__item {
   display: -webkit-box;
@@ -2939,6 +2954,7 @@ body.lock {
   transition: 0.3s;
 }
 .footer__search-btn img {
+  width: 16px;
   margin-left: 4px;
 }
 .footer__search-btn:hover {

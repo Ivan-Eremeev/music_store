@@ -41,17 +41,20 @@
     background-color: #8993a4;
     position: relative;
     img {
+      width: 17px;
       position: absolute;
       top: 50%;
       left: 50%;
     }
     &--prev {
       img {
+        margin-top: -1px;
         transform: translate(-50%, -50%);
       }
     }
     &--next {
       img {
+        margin-top: 1px;
         transform: translate(-50%, -50%) rotate(180deg);
       }
     }
