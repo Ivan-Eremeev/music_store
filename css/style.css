@@ -1398,6 +1398,7 @@ body.lock {
   }
   .header__login-flex {
     max-width: none;
+    width: 100%;
   }
   .header__login-name {
     color: #3e4757;

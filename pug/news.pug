@@ -1,0 +1,24 @@
+extends core/base.pug
+
+block title 
+  title Навигация по страницам
+
+block content
+
+  .page 
+
+    include core/header.pug
+
+    .content 
+
+      // news
+      .news
+        .wrapper
+          .news__head 
+            .title Новости
+            .news__buttons 
+              a(href="#").news__btn 
+              a(href="#").news__btn 
+      // /news
+
+    include core/footer.pug
