@@ -98,12 +98,12 @@ window.onload = function () {
       slidesPerView: 1,
       spaceBetween: 26,
       pagination: {
-        el: '.swiper-pagination',
+        el: '.stores__pagination',
         clickable: true,
       },
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.stores__arrow--next',
+        prevEl: '.stores__arrow--prev',
       },
       breakpoints: {
         // when window width is >= 320px
@@ -119,6 +119,20 @@ window.onload = function () {
           slidesPerView: 4,
         }
       }
+    });
+  }
+
+  if ($('#newspageSlider').length) {
+    const swiper = new Swiper('#newspageSlider', {
+      slidesPerView: 1,
+      pagination: {
+        el: '.newspage__pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.newspage__arrow--next',
+        prevEl: '.newspage__arrow--prev',
+      },
     });
   }
 

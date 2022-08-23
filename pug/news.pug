@@ -17,8 +17,75 @@ block content
           .news__head 
             .title Новости
             .news__buttons 
-              a(href="#").news__btn 
-              a(href="#").news__btn 
+              .news__buttons-row 
+                a(href="#").news__btn все новости 
+                a(href="#").news__btn все статьи 
+          .row.gy
+            .news__col-big 
+              a(href="#").news__item.news__item--big 
+                .news__img 
+                  img(src="img/news/img1.jpg", alt="", srcset="img/news/img1@2x.jpg 2x")
+                .news__content 
+                  p Худший из лучших. Почему все так ненавидят и любят Bon Jovi?
+                  .news__triangle 
+            .news__col-big
+              .row.gy
+                .news__col-small 
+                  a(href="#").news__item 
+                    .news__img 
+                      img(src="img/news/img2.jpg", alt="", srcset="img/news/img2@2x.jpg 2x")
+                    .news__content 
+                      p Подборка 100 редких товаров на портале
+                      .news__triangle 
+                .news__col-small 
+                  a(href="#").news__item 
+                    .news__img 
+                      img(src="img/news/img3.jpg", alt="", srcset="img/news/img3@2x.jpg 2x")
+                    .news__content 
+                      p Wilco возвращается к корням на ‘Cruel Country’
+                      .news__triangle 
+                .news__col-small 
+                  a(href="#").news__item 
+                    .news__img 
+                      img(src="img/news/img4.jpg", alt="", srcset="img/news/img4@2x.jpg 2x")
+                    .news__content 
+                      p Fleetwood Mac’s 50 Лучших композиций
+                      .news__triangle 
+                .news__col-small 
+                  a(href="#").news__item 
+                    .news__img 
+                      img(src="img/news/img5.jpg", alt="", srcset="img/news/img5@2x.jpg 2x")
+                    .news__content 
+                      p Последний день Taylor Hawkins’ в команде Foo Fighter
+                      .news__triangle 
       // /news
+
+      // newspage
+      .newspage
+        .wrapper 
+          .newspage__row 
+
+            .newspage__main 
+              
+              .newspage__slider
+                #newspageSlider
+                  .swiper-wrapper 
+                    .swiper-slide 
+                      img(src="img/news-slider.jpg", alt="", srcset="img/news-slider@2x.jpg 2x")
+                    .swiper-slide 
+                      img(src="img/news-slider.jpg", alt="", srcset="img/news-slider@2x.jpg 2x")
+                    .swiper-slide 
+                      img(src="img/news-slider.jpg", alt="", srcset="img/news-slider@2x.jpg 2x")
+                  .newspage__controll 
+                    .newspage__arrow.newspage__arrow--prev.swiper-button-prev
+                      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path xmlns="http://www.w3.org/2000/svg" d="m22 11h-17.586l5.293-5.293a1 1 0 1 0 -1.414-1.414l-7 7a1 1 0 0 0 0 1.414l7 7a1 1 0 0 0 1.414-1.414l-5.293-5.293h17.586a1 1 0 0 0 0-2z" class=""></path></g></svg>
+                    .newspage__pagination.swiper-pagination
+                    .newspage__arrow.newspage__arrow--next.swiper-button-next
+                      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path xmlns="http://www.w3.org/2000/svg" d="m22 11h-17.586l5.293-5.293a1 1 0 1 0 -1.414-1.414l-7 7a1 1 0 0 0 0 1.414l7 7a1 1 0 0 0 1.414-1.414l-5.293-5.293h17.586a1 1 0 0 0 0-2z" class=""></path></g></svg>
+
+              .title Группа Rammstein сняли клип про идеальную деревню
+
+            .newspage__sidebar 
+      // /newspage
 
     include core/footer.pug
