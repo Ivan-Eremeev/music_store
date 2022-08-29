@@ -324,6 +324,9 @@
     &__item-img {
       height: 170px;
     }
+    &__controll {
+      padding-top: 20px;
+    }
   }
   @media (max-width: $break_xs) {
     &__slider {
@@ -370,6 +373,10 @@
     &__button {
       margin-top: 15px;
       font-size: 16px;
+    }
+    &__controll {
+      padding-top: 10px;
+      padding-bottom: 0;
     }
   }
 }
