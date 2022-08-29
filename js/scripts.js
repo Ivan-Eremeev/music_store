@@ -251,4 +251,44 @@ window.onload = function () {
   }
   dropBlockFocus($('.js-drop-input'));
 
+  // Видео youtube для страницы
+  function uploadYoutubeVideo() {
+    if ($(".js-youtube")) {
+
+      $(".js-youtube").each(function () {
+        // Зная идентификатор видео на YouTube, легко можно найти его миниатюру
+        $(this).css('background-image', 'url(http://i.ytimg.com/vi/' + this.id + '/sddefault.jpg)');
+
+        // Добавляем иконку Play поверх миниатюры, чтобы было похоже на видеоплеер
+        $(this).append($('<div class="video__play"><img src="img/icons/play.svg" alt="Play"></div>'));
+
+      });
+
+      $('.video__play, .video__wrapper').on('click', function () {
+        // создаем iframe со включенной опцией autoplay
+        let wrapp = $(this).closest('.js-youtube'),
+          videoId = wrapp.attr('id'),
+          play = wrapp.find('.video__play'),
+          iframe_url = "https://www.youtube.com/embed/" + videoId + "?autoplay=1&autohide=1";
+
+        if ($(this).data('params')) iframe_url += '&' + $(this).data('params');
+
+        // Высота и ширина iframe должны быть такими же, как и у родительского блока
+        let iframe = $('<iframe/>', {
+          'frameborder': '0',
+          'src': iframe_url,
+          'allow': "autoplay"
+        })
+
+        // Заменяем миниатюру HTML5 плеером с YouTube
+        wrapp.find('.video__wrapper').append(iframe);
+
+        // Удаляем кнопку
+        play.remove();
+
+      });
+    }
+  };
+  uploadYoutubeVideo();
+
 }
