@@ -1,0 +1,55 @@
+extends core/base.pug
+
+block title 
+  title Навигация по страницам
+
+block content
+
+  .page 
+
+    include core/header.pug
+
+    .content 
+
+      // breadcrumbs
+      .breadcrumbs
+        .wrapper 
+          .breadcrumbs__list 
+            ul 
+              li 
+                a(href="#") В продаже
+              li 
+                a(href="#") Вся Россия
+              li 
+                span Винил
+      // /breadcrumbs
+
+      // product
+      .product
+        .wrapper 
+          h1.title Modern Talking - 1985 "The 2nd Album" Sonderauflage
+
+          .product__row 
+          
+            .product__head 
+              .product__head-items 
+                a(href="#").product__head-item Добавить в избранное
+                a(href="#").product__head-item Хотел бы приобрести
+                a(href="#").product__head-item Этот товар у меня в коллекции
+              .product__statistics 
+                .product__statistics-items
+                  .product__statistics-item 141 Имеют
+                  .product__statistics-item 21 Хотят
+                .product__statistics-date 22.06.2022 в 07:32
+
+            .product__plug
+
+          .product__row 
+
+            .product__main 
+
+            
+            .product__sidebar 
+      // /product
+
+    include core/footer.pug
