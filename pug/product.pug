@@ -90,7 +90,7 @@ block content
 
                   form(action="#").product__buy 
                     .product__price 2 300
-                      span.pruduct__rub &nbsp;&#8381;
+                      span.poduct__rub &nbsp;&#8381;
                     
                     .product__delivery 
                       img(src="img/icons/car.svg", alt="")
@@ -99,6 +99,36 @@ block content
                       span (из Екатеринбурга)
 
                     button(type="submit").product__btn.product__btn--blue Купить
+                    a(href="#").product__btn.product__btn--white Связаться с продавцом
+
+                  .product__studio 
+                    .product__studio-name 
+                      a(href="#") JR Studio
+                    .product__points 
+                      .product__percent 
+                        img(src="img/icons/heart.webp", alt="" srcset="heart@2x.webp 2x")
+                        | 92.8%
+                      a(href="#").product__count 208 оценок
+                    .product__text Москва, Россия
+
+                  form(action="#").product__auction 
+                    .product__auction-price  
+                      img(src="img/icons/auction.svg", alt="")
+                      | 590
+                      span.product__rub &nbsp;&#8381;
+                    .product__delivery 
+                      img(src="img/icons/car.svg", alt="")
+                      | 350 
+                      .product__rub &nbsp;&#8381;
+                      span (из Екатеринбурга)
+                    .product__date 03 дн. 16:32:59
+                    .product__input
+                      input(type="text", name="" placeholder="Ваша ставка")
+                    .product__clarification Введите не менее 600 ₽
+                    button(type="submit").product__btn.product__btn--violet
+                      img(src="img/icons/lightning.webp", alt="" srcset="lightning@2x.webp 2x")
+                      | Сделать ставку
+                    button(type="submit").product__btn.product__btn--blue Купить сразу за 2 300 ₽
                     a(href="#").product__btn.product__btn--white Связаться с продавцом
             
             .product__sidebar 
