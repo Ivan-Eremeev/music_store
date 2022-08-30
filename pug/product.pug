@@ -48,7 +48,7 @@ block content
 
             .product__main 
 
-              .product__row 
+              .product__rowin
                 
                 .product__left 
 
@@ -56,13 +56,13 @@ block content
                     #productSlider
                       .swiper-wrapper 
                         .swiper-slide 
-                          a(href="img/product@2x.jpg") 
+                          a(href="img/product@2x.jpg" data-fancybox="productGallery") 
                             img(src="img/product.jpg", alt="", srcset="img/product@2x.jpg 2x")
                         .swiper-slide 
-                          a(href="img/product@2x.jpg") 
+                          a(href="img/product@2x.jpg" data-fancybox="productGallery") 
                             img(src="img/product.jpg", alt="", srcset="img/product@2x.jpg 2x")
                         .swiper-slide 
-                          a(href="img/product@2x.jpg") 
+                          a(href="img/product@2x.jpg" data-fancybox="productGallery") 
                             img(src="img/product.jpg", alt="", srcset="img/product@2x.jpg 2x")
                       .product__controll 
                         .product__arrow.product__arrow--prev.swiper-button-prev
@@ -87,6 +87,19 @@ block content
                     p Лейбл: Hansa (36 076-8) -Germany <br>Состояние: обложка Vg++ (небольшое замятие угла) / пластинка Vg++ (визуально - Vg / ст.А-В - небольшая "волна" - не влияет на воспроизведение).
 
                 .product__right 
+
+                  form(action="#").product__buy 
+                    .product__price 2 300
+                      span.pruduct__rub &nbsp;&#8381;
+                    
+                    .product__delivery 
+                      img(src="img/icons/car.svg", alt="")
+                      | 350 
+                      .product__rub &nbsp;&#8381;
+                      span (из Екатеринбурга)
+
+                    button(type="submit").product__btn.product__btn--blue Купить
+                    a(href="#").product__btn.product__btn--white Связаться с продавцом
             
             .product__sidebar 
       // /product
