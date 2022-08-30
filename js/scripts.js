@@ -136,6 +136,20 @@ window.onload = function () {
     });
   }
 
+  if ($('#productSlider').length) {
+    const swiper = new Swiper('#productSlider', {
+      slidesPerView: 1,
+      pagination: {
+        el: '.product__pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.product__arrow--next',
+        prevEl: '.product__arrow--prev',
+      },
+    });
+  }
+
   // Magnific Popup
   $('.open-popup-link').magnificPopup({
     mainClass: 'mfp-fade',
