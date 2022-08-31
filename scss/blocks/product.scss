@@ -137,6 +137,7 @@
     fill: #fff;
     position: static;
     margin-top: 0;
+    flex-shrink: 0;
     svg {
       transition: 0.1s;
     }
@@ -333,6 +334,7 @@
     margin-bottom: 12px;
   }
   &__input {
+    max-width: 300px;
     margin-bottom: 5px;
     input {
       width: 100%;
@@ -355,15 +357,54 @@
     font-size: 12px;
     margin-bottom: 5px;
   }
+  @media (max-width: $break_lg) {
+    &__row {
+      flex-wrap: wrap;
+    }
+    &__main {
+      margin-bottom: 20px;
+    }
+    &__sidebar {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
   @media (max-width: $break_sm) {
     &__controll {
       padding-top: 20px;
+    }
+    &__rowin {
+      flex-wrap: wrap;
+    }
+    &__right {
+      width: 100%;
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
   @media (max-width: $break_xs) {
     &__controll {
       padding-top: 10px;
       padding-bottom: 0;
+    }
+    &__slider {
+      .swiper-slide {
+        img {
+          height: 300px;
+        }
+      }
+    }
+    &__main {
+      padding: 15px;
+      &:before {
+        left: 5px;
+        right: 5px;
+        top: 5px;
+      }
+    }
+    &__sidebar {
+      padding: 15px;
     }
   }
 }
