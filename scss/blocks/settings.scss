@@ -119,6 +119,14 @@ body {
     }
   }
 }
+.subtitle {
+  font-size: 24px;
+  color: #161d2c;
+  font-weight: bold;
+  @media (max-width: $break_sm) {
+    font-size: 20px;
+  }
+}
 .back-blur {
   position: fixed;
   z-index: 11;

@@ -150,6 +150,16 @@ window.onload = function () {
     });
   }
 
+  if ($('#releaseSlder').length) {
+    const swiper = new Swiper('#releaseSlder', {
+      slidesPerView: 1,
+      navigation: {
+        nextEl: '.release__arrow--next',
+        prevEl: '.release__arrow--prev',
+      },
+    });
+  }
+
   // Magnific Popup
   $('.open-popup-link').magnificPopup({
     mainClass: 'mfp-fade',
