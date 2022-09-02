@@ -112,6 +112,9 @@ body {
     font-weight: normal;
     color: #000;
   }
+  &__blue {
+    color: $blue;
+  }
   @media (max-width: $break_sm) {
     font-size: 24px;
     &__sticker {

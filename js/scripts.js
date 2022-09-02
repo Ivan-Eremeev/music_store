@@ -160,6 +160,17 @@ window.onload = function () {
     });
   }
 
+  if ($('#discographySlider').length) {
+    const swiper = new Swiper('#discographySlider', {
+      slidesPerView: 1,
+      navigation: {
+        nextEl: '.discography__arrow--next',
+        prevEl: '.discography__arrow--prev',
+      },
+    });
+  }
+
+
   // Magnific Popup
   $('.open-popup-link').magnificPopup({
     mainClass: 'mfp-fade',
