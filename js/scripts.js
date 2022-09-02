@@ -343,8 +343,6 @@ window.onload = function () {
           categories: ['мин. цена', 'средняя цена', 'макс. цена'],
         },
         yAxis: {
-          type: 'logarithmic',
-          minorTickInterval: 0.1,
           title: false,
           lineColor: '#666666',
         },
@@ -353,7 +351,6 @@ window.onload = function () {
         series: [{
           name: 'Цена',
           data: range,
-          // pointStart: 1
         }],
         plotOptions: {
           spline: {
@@ -369,7 +366,7 @@ window.onload = function () {
           }
         },
         tooltip: {
-          valueSuffix: '₽'
+          valueSuffix: ' ₽'
         },
         legend: false,
         credits: false,
