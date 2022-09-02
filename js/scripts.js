@@ -326,4 +326,56 @@ window.onload = function () {
   };
   uploadYoutubeVideo();
 
+  // Highcharts | График
+  function chartByStatistic() {
+    if ($('#chartByStatistic').length) {
+      const chart = $('#chartByStatistic');
+      const title = chart.data('title');
+      const range = chart.data('range');
+      Highcharts.chart('chartByStatistic', {
+        chart: {
+          type: 'spline'
+        },
+        title: {
+          text: title
+        },
+        xAxis: {
+          categories: ['мин. цена', 'средняя цена', 'макс. цена'],
+        },
+        yAxis: {
+          type: 'logarithmic',
+          minorTickInterval: 0.1,
+          title: false,
+          lineColor: '#666666',
+        },
+        tooltip: {
+        },
+        series: [{
+          name: 'Цена',
+          data: range,
+          // pointStart: 1
+        }],
+        plotOptions: {
+          spline: {
+            dataLabels: {
+              enabled: true,
+              format: '{y} ₽',
+              color: '#3e4757'
+            },
+            color: '#DDDFE0',
+            marker: {
+              fillColor: '#5e40e7'
+            }
+          }
+        },
+        tooltip: {
+          valueSuffix: '₽'
+        },
+        legend: false,
+        credits: false,
+      });   
+    }
+  }
+  chartByStatistic();
+
 }
