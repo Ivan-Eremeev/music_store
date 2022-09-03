@@ -238,4 +238,118 @@ block content
 
       // /discography
 
+      // discocollection
+      .discocollection
+        .wrapper 
+
+          .catalog__head 
+
+            .title Дискография Paul McCartney
+              .title__sticker 3 600 результатов
+
+            .catalog__filter-btn.js-menu-hamb(data-menu="filter")
+              svg(width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg")
+                rect(x="1" y="1" width="58" height="16" rx="5")
+                rect(x="1" y="22" width="58" height="16" rx="5")
+                rect(x="1" y="43" width="58" height="16" rx="5")
+
+              | Фильтры
+
+            form(action="#").catalog__sort 
+              .catalog__sort-icon.active
+                input#sort-list(type="radio", name="sort" checked)
+                label(for="sort-list") 
+                  svg(width="20" height="20" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg")
+                    rect(x="1" y="1" width="16" height="16" rx="5")
+                    rect(x="20" y="1" width="39" height="16" rx="5")
+                    rect(x="20" y="22" width="39" height="16" rx="5")
+                    rect(x="20" y="43" width="39" height="16" rx="5")
+                    rect(x="1" y="22" width="16" height="16" rx="5")
+                    rect(x="1" y="43" width="16" height="16" rx="5")
+              .catalog__sort-icon 
+                input#sort-block(type="radio", name="sort")
+                label(for="sort-block") 
+                  svg(width="20" height="20" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg")
+                    rect(x="1" y="1" width="27" height="27" rx="5")
+                    rect(x="1" y="32" width="27" height="27" rx="5")
+                    rect(x="32" y="32" width="27" height="27" rx="5")
+                    rect(x="32" y="1" width="27" height="27" rx="5")
+              .catalog__sort-select 
+                select(name="#") 
+                  option(value="#" disabled selected) Сортировать
+                  option(value="#") По дате выхода
+                  option(value="#") Дешевле
+                  option(value="#") Дороже
+
+          .discocollection__row 
+
+            .discocollection__sidebar 
+
+            .discocollection__main 
+
+              .discocollection__items
+
+                .discocollection__item 
+                  a(href="#").discocollection__img 
+                    img(src="img/albums/img1.jpg", alt="", srcset="img/albums/img1@2x.jpg 2x")
+                  .discocollection__content 
+                    .discocollection__text 
+                      .discocollection__head 
+                        a(href="#") The Family Way
+                        .discocollection__sticker 22 издания
+                      p 1967
+                      p 
+                        a(href="#") Decca
+                    .discocollection__btn-block 
+                      a(href="#").discocollection__btn Посмотреть в продаже
+
+                .discocollection__item 
+                  a(href="#").discocollection__img 
+                    img(src="img/albums/img2.jpg", alt="", srcset="img/albums/img2@2x.jpg 2x")
+                  .discocollection__content 
+                    .discocollection__text 
+                      .discocollection__head 
+                        a(href="#") McCartney
+                        .discocollection__sticker 22 издания
+                      p 1970
+                      p 
+                        a(href="#") Apple Records
+                    .discocollection__btn-block 
+                      a(href="#").discocollection__btn Посмотреть в продаже
+
+              .discocollection__performers 
+                .row 
+                  .discocollection__col 
+                    .discocollection__performer 
+                      a(href="#").discocollection__performer-img 
+                        img(src="img/performers/img2.jpg", alt="", srcset="img/performers/img2@2x.jpg 2x")
+                      .discocollection__performer-name 
+                        a(href="#") Lennon-McCartney
+                  .discocollection__col 
+                    .discocollection__performer 
+                      a(href="#").discocollection__performer-img 
+                        img(src="img/performers/img3.jpg", alt="", srcset="img/performers/img3@2x.jpg 2x")
+                      .discocollection__performer-name 
+                        a(href="#") Jagger-Richards
+                  .discocollection__col 
+                    .discocollection__performer 
+                      a(href="#").discocollection__performer-img 
+                        img(src="img/performers/img4.jpg", alt="", srcset="img/performers/img4@2x.jpg 2x")
+                      .discocollection__performer-name 
+                        a(href="#") Bobby Womack
+                  .discocollection__col 
+                    .discocollection__performer 
+                      a(href="#").discocollection__performer-img 
+                        img(src="img/performers/img5.jpg", alt="", srcset="img/performers/img5@2x.jpg 2x")
+                      .discocollection__performer-name 
+                        a(href="#") John Golden
+                  .discocollection__col 
+                    .discocollection__performer 
+                      a(href="#").discocollection__performer-img 
+                        img(src="img/performers/img6.jpg", alt="", srcset="img/performers/img6@2x.jpg 2x")
+                      .discocollection__performer-name 
+                        a(href="#") Irving Berlin
+
+      // /discocollection
+
     include core/footer.pug
