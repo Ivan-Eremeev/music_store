@@ -4827,6 +4827,8 @@ body.lock {
   z-index: -1;
 }
 .discocollection__img {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   width: 100px;
   height: 100px;
   margin-right: 22px;
@@ -4868,6 +4870,8 @@ body.lock {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 2px;
@@ -4901,6 +4905,7 @@ body.lock {
   background-color: #428bf9;
   font-size: 14px;
   color: #fff;
+  text-align: center;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -4911,6 +4916,19 @@ body.lock {
 .discocollection__performers {
   margin-bottom: 20px;
 }
+.discocollection__col {
+  width: 20%;
+}
+@media screen and (max-width: 768px) {
+  .discocollection__col {
+    width: 33.3333333333%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .discocollection__col {
+    width: 50%;
+  }
+}
 .discocollection__performer-img {
   display: block;
   margin-bottom: 10px;
@@ -4918,6 +4936,7 @@ body.lock {
 }
 .discocollection__performer-img img {
   display: block;
+  width: 100%;
   height: 170px;
   border-radius: 4px;
   -o-object-fit: cover;
@@ -5058,6 +5077,89 @@ body.lock {
 }
 .discocollection__pagination {
   margin-top: auto;
+}
+.discocollection__close {
+  display: none;
+}
+@media (max-width: 1200px) {
+  .discocollection__sidebar {
+    padding-top: 60px;
+    background-color: #fff;
+    border-radius: 0;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -400px;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    z-index: 11;
+  }
+  .discocollection__sidebar.open {
+    left: 0;
+  }
+  .discocollection__filter {
+    height: 100%;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .discocollection__filter::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  .discocollection__close {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  .discocollection__close:after, .discocollection__close:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #3e4757;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+  .discocollection__close:after {
+    -webkit-transform: translate(-50%, -50%) rotate(45deg);
+    -ms-transform: translate(-50%, -50%) rotate(45deg);
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .discocollection__close:before {
+    -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+    -ms-transform: translate(-50%, -50%) rotate(-45deg);
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+@media (max-width: 768px) {
+  .discocollection__btn-block {
+    width: 100%;
+  }
+  .discocollection__head {
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 500px) {
+  .discocollection__performers > .row {
+    margin-left: -10px;
+  }
+  .discocollection__performers > .row > * {
+    padding-left: 10px;
+  }
+  .discocollection__img {
+    margin-right: 10px;
+  }
+  .discocollection__head {
+    font-size: 16px;
+  }
 }
 
 /* /discocollection */
