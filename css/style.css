@@ -4782,11 +4782,18 @@ body.lock {
   margin-right: 24px;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  padding: 23px 28px 233px 27px;
+  padding: 15px 25px;
   border-radius: 15px;
   border: solid 2px #f5f6f8;
 }
 .discocollection__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
@@ -4901,6 +4908,9 @@ body.lock {
 .discocollection__btn:hover {
   background-color: #42A0F9;
 }
+.discocollection__performers {
+  margin-bottom: 20px;
+}
 .discocollection__performer-img {
   display: block;
   margin-bottom: 10px;
@@ -4924,6 +4934,130 @@ body.lock {
 }
 .discocollection__performer-name a:hover {
   color: #5e40e7;
+}
+.discocollection__filter-list {
+  margin-bottom: 25px;
+}
+.discocollection__filter-list li {
+  margin: 7px 0;
+}
+.discocollection__filter-list li input {
+  position: absolute;
+  visibility: hidden;
+}
+.discocollection__filter-list li input:checked ~ label .discocollection__filter-text {
+  color: #428bf9;
+}
+.discocollection__filter-list li label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.discocollection__filter-list li label:hover .discocollection__filter-text {
+  color: #000;
+  -webkit-transform: translate(2px, 0);
+  -ms-transform: translate(2px, 0);
+  transform: translate(2px, 0);
+}
+.discocollection__filter-text {
+  text-decoration: underline;
+  -webkit-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s;
+}
+.discocollection__filter-sticker {
+  min-width: 40px;
+  margin-left: auto;
+  padding: 5px 10px;
+  background-color: #f1f3f5;
+  border-radius: 20px;
+  font-size: 10px;
+  color: #8993a4;
+  text-align: center;
+}
+.discocollection__filter-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 4px 12px 5px;
+  border-radius: 20px;
+  border: solid 2px #dddfe0;
+  background-color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  margin-bottom: 40px;
+}
+.discocollection__filter-btn svg {
+  width: 13px;
+  margin-right: 7px;
+  fill: #3e4757;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.discocollection__filter-btn:hover {
+  border-color: #428bf9;
+  background-color: #428bf9;
+  color: #fff;
+}
+.discocollection__filter-btn:hover svg {
+  fill: #fff;
+}
+.discocollection__alphabet-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.discocollection__alphabet-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -7px;
+  margin-right: -7px;
+}
+.discocollection__alphabet-item {
+  margin: 2px;
+}
+.discocollection__alphabet-item input {
+  position: absolute;
+  visibility: hidden;
+}
+.discocollection__alphabet-item input:checked ~ label {
+  color: #428bf9;
+}
+.discocollection__alphabet-item label {
+  padding: 5px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.discocollection__alphabet-item label:hover {
+  color: #000;
+}
+.discocollection__pagination {
+  margin-top: auto;
 }
 
 /* /discocollection */
