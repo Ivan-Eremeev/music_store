@@ -1,0 +1,166 @@
+/* releaselist */
+.releaselist { 
+  margin-bottom: 30px;
+  .title {
+    margin-right: 20px;
+  }
+  &__addbtn {
+    display: flex;
+    align-items: center;
+    padding: 4px 12px 5px;
+    border-radius: 20px;
+    border: solid 2px #dddfe0;
+    background-color: #fff;
+    font-size: 14px;
+    color: $text;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.3s;
+    svg {
+      width: 13px;
+      margin-right: 7px;
+      fill: $text;
+      transition: 0.3s;
+    }
+    &:hover {
+      border-color: $blue;
+      background-color: $blue;
+      color: #fff;
+      svg {
+        fill: #fff;
+      }
+    }
+  }
+  &__table {
+    overflow-x: auto;
+    table {
+      width: 100%;
+      min-width: 1000px;
+      tr {
+        &:first-child {
+          font-size: 18px;
+          font-weight: 600;
+          text-decoration: underline;
+        }
+        &:not(:first-child) {
+          font-size: 14px;
+          color: #161d2c;
+          a {
+            color: $blue;
+            text-decoration: underline;
+            &:hover {
+              color: $blueHov;
+            }
+          }
+          td {
+            position: relative;
+            &:before {
+              content: '';
+              display: block;
+              height: 100%;
+              background: linear-gradient(to bottom, #F1F1F1, transparent);
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              z-index: -1;
+            }
+          }
+        }
+        td {
+          padding: 18px 0;
+          &:first-child {
+            padding-left: 18px;
+          }
+          &:last-child {
+            width: 200px;
+            padding-right: 18px;
+          }
+        }
+      }
+    }
+  }
+  &__icons {
+    display: flex;
+    justify-content: center;
+  }
+  &__icon {
+    input {
+      position: absolute;
+      visibility: hidden;
+      &:checked {
+        ~ label {
+          background-color: $blue;
+          color: #fff;
+          fill: #fff;
+          border-color: $blue;
+        }
+      }
+    }
+    label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 28px;
+      height: 28px;
+      margin: 0 2.5px;
+      border: solid 2px #dddfe0;
+      background-color: #fff;
+      border-radius: 100%;
+      fill: $text;
+      cursor: pointer;
+      user-select: none;
+      transition: .3s;
+      svg {
+        width: 14px;
+      }
+    }
+    &--stroke {
+      input {
+        &:checked {
+          ~label {
+            fill: transparent;
+            stroke: #fff;
+          }
+        }
+      }
+      label {
+        stroke: $text;
+        fill: transparent;
+      }
+    }
+    &:hover {
+      label {
+        border-color: $blue;
+      }
+    }
+  }
+  &__btn {
+    display: block;
+    width: 100%;
+    padding: 5px 6px 4px;
+    border-radius: 20px;
+    user-select: none;
+    transition: .3s;
+    text-align: center;
+    text-decoration: none !important;
+    &--blue {
+      background-color: $blue;
+      color: #fff !important;
+      cursor: pointer;
+      &:hover {
+        background-color: #42A0F9;
+      }
+    }
+    &--white {
+      border: solid 2px #dddfe0;
+      background: transparent;
+      color: $text !important;
+    }
+  }
+  &__title {
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+/* /releaselist */
