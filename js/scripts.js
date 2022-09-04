@@ -150,12 +150,30 @@ window.onload = function () {
     });
   }
 
-  if ($('#releaseSlder').length) {
-    const swiper = new Swiper('#releaseSlder', {
+  if ($('#releaseSlder0').length) {
+    const swiper = new Swiper('#releaseSlder0', {
       slidesPerView: 1,
       navigation: {
-        nextEl: '.release__arrow--next',
-        prevEl: '.release__arrow--prev',
+        nextEl: '.swiper-button-next0',
+        prevEl: '.swiper-button-prev0',
+      },
+    });
+  }
+  if ($('#releaseSlder1').length) {
+    const swiper = new Swiper('#releaseSlder1', {
+      slidesPerView: 1,
+      navigation: {
+        nextEl: '.swiper-button-next1',
+        prevEl: '.swiper-button-prev1',
+      },
+    });
+  }
+  if ($('#releaseSlder2').length) {
+    const swiper = new Swiper('#releaseSlder2', {
+      slidesPerView: 1,
+      navigation: {
+        nextEl: '.swiper-button-next2',
+        prevEl: '.swiper-button-prev2',
       },
     });
   }
