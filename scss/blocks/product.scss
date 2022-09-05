@@ -232,9 +232,6 @@
     color: #000;
     text-align: center;
     margin-bottom: 7px;
-    .pruduct__rub {
-      font-weight: 500;
-    }
   }
   &__delivery {
     display: flex;
@@ -248,9 +245,6 @@
       width: 17px;
       margin-right: 5px;
     }
-    .pruduct__rub {
-      font-weight: 500;
-    }
     span {
       font-weight: 600;
       margin-left: 5px;
@@ -259,7 +253,6 @@
   }
   &__rub {
     font-family: "HelveticaNeue", sans-serif; 
-    font-weight: 500;
   }
   &__btn {
     display: flex;
@@ -361,9 +354,6 @@
     img {
       width: 30px;
       margin-right: 10px;
-    }
-    .product__rub {
-      font-weight: bold;
     }
   }
   &__date {

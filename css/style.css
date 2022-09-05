@@ -3897,9 +3897,6 @@ body.lock {
   text-align: center;
   margin-bottom: 7px;
 }
-.product__price .pruduct__rub {
-  font-weight: 500;
-}
 .product__delivery {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3919,9 +3916,6 @@ body.lock {
   width: 17px;
   margin-right: 5px;
 }
-.product__delivery .pruduct__rub {
-  font-weight: 500;
-}
 .product__delivery span {
   font-weight: 600;
   margin-left: 5px;
@@ -3929,7 +3923,6 @@ body.lock {
 }
 .product__rub {
   font-family: "HelveticaNeue", sans-serif;
-  font-weight: 500;
 }
 .product__btn {
   display: -webkit-box;
@@ -4054,9 +4047,6 @@ body.lock {
 .product__auction-price img {
   width: 30px;
   margin-right: 10px;
-}
-.product__auction-price .product__rub {
-  font-weight: bold;
 }
 .product__date {
   font-size: 22px;
