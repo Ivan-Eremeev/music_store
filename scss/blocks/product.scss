@@ -65,6 +65,7 @@
     fill: $text;
     svg {
       max-height: 14px;
+      display: block;
     }
     &:hover, &.active {
       border-color: $blue;
@@ -81,8 +82,6 @@
     }
   }
   &__head-item-icon {
-    display: flex;
-    align-items: center;
     width: 14px;
     margin-right: 7px;
     flex-shrink: 0;
