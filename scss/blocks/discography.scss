@@ -188,6 +188,11 @@
     .highcharts-title {
       font-size: 14px !important;
     }
+    .highcharts-text-outline {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
   @media (max-width: $break_lg) {
     &__row {

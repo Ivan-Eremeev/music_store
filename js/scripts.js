@@ -364,6 +364,7 @@ window.onload = function () {
             enabled: false,
           },
           lineWidth: 0,
+          minorTickInterval: 0.1,
         },
         yAxis: {
           title: false,
@@ -383,8 +384,11 @@ window.onload = function () {
           spline: {
             dataLabels: {
               enabled: true,
-              format: '{y} ₽',
-              color: '#3e4757'
+              // format: ,
+              formatter: function () {
+                return this.y + ' ₽ <br>' + this.x;
+              },
+              color: '#3e4757',
             },
             color: '#DDDFE0',
             marker: {
@@ -393,7 +397,8 @@ window.onload = function () {
           }
         },
         tooltip: {
-          valueSuffix: ' ₽'
+          enabled: false,
+          valueSuffix: ' ₽',
         },
         legend: false,
         credits: false,
