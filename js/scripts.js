@@ -139,7 +139,7 @@ window.onload = function () {
   if ($('#productSlider').length) {
     const swiper = new Swiper('#productSlider', {
       slidesPerView: 1,
-      allowTouchMove: false,
+      allowTouchMove: true,
       pagination: {
         el: '.product__pagination',
         clickable: true,
@@ -148,6 +148,11 @@ window.onload = function () {
         nextEl: '.product__arrow--next',
         prevEl: '.product__arrow--prev',
       },
+      breakpoints: {
+        769: {
+          allowTouchMove: false,
+        },
+      }
     });
   }
 
