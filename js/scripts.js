@@ -352,17 +352,26 @@ window.onload = function () {
       const range = chart.data('range');
       Highcharts.chart('chartByStatistic', {
         chart: {
-          type: 'spline'
+          type: 'spline',
+          height: 250,
         },
         title: {
           text: title
         },
         xAxis: {
           categories: ['мин. цена', 'средняя цена', 'макс. цена'],
+          labels: {
+            enabled: false,
+          },
+          lineWidth: 0,
         },
         yAxis: {
           title: false,
           lineColor: '#666666',
+          labels: {
+            enabled: false,
+          },
+          gridLineWidth: 0,
         },
         tooltip: {
         },
