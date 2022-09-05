@@ -139,6 +139,7 @@ window.onload = function () {
   if ($('#productSlider').length) {
     const swiper = new Swiper('#productSlider', {
       slidesPerView: 1,
+      allowTouchMove: false,
       pagination: {
         el: '.product__pagination',
         clickable: true,
