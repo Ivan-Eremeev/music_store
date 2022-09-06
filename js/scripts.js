@@ -140,6 +140,7 @@ window.onload = function () {
     const swiper = new Swiper('#productSlider', {
       slidesPerView: 1,
       allowTouchMove: true,
+      autoHeight: true,
       pagination: {
         el: '.product__pagination',
         clickable: true,
@@ -159,6 +160,7 @@ window.onload = function () {
   if ($('#releaseSlder0').length) {
     const swiper = new Swiper('#releaseSlder0', {
       slidesPerView: 1,
+      autoHeight: true,
       navigation: {
         nextEl: '.swiper-button-next0',
         prevEl: '.swiper-button-prev0',
