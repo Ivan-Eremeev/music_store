@@ -296,7 +296,7 @@ window.onload = function () {
       $this = $(this);
       drop = $('#' + $this.data('drop'));
       $this.addClass('is-active');
-      drop.stop().slideDown(200);
+      drop.slideDown(200);
       backBlur.addClass('active');
       $(document).mouseup(function (e) {
         if (!$this.is(e.target)
@@ -304,7 +304,7 @@ window.onload = function () {
           && !drop.is(e.target)
           && drop.has(e.target).length === 0) {
           $this.removeClass('is-active');
-          drop.stop().slideUp(200);
+          drop.slideUp(200);
           backBlur.removeClass('active');
         }
       });
