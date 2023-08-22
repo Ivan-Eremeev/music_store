@@ -189,6 +189,7 @@ window.onload = function () {
   if ($('#discographySlider').length) {
     const swiper = new Swiper('#discographySlider', {
       slidesPerView: 1,
+      autoHeight: true,
       navigation: {
         nextEl: '.discography__arrow--next',
         prevEl: '.discography__arrow--prev',
@@ -298,7 +299,7 @@ window.onload = function () {
       $this.addClass('is-active');
       drop.slideDown(200);
       backBlur.addClass('active');
-      $(document).mouseup(function (e) {
+      $(document).on('mousedown', function (e) {
         if (!$this.is(e.target)
           && $this.has(e.target).length === 0
           && !drop.is(e.target)
